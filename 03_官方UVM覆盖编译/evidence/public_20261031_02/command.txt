@@ -1,0 +1,8 @@
+env -u LD_PRELOAD PYTHONDONTWRITEBYTECODE=1 timeout --signal=TERM --kill-after=30s 5400s
+  <venv-python> -B <revision-source>/util/dvsim/dvsim.py
+  <revision-source>/hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson
+  --proj-root <revision-source> --branch stage03 --local
+  --scratch-root <new-run-scratch>/dvsim --max-parallel 1
+  --items aon_timer_smoke --cov --fixed-seed 42 --no-rerun
+  --max-odirs 1 --build-timeout-mins 120 --run-timeout-mins 30
+compatibility_patch=merge the two VCS coverage configs into one; remove -cm_common_hier and -xprop=mmsopt from per-run DVSim config copies

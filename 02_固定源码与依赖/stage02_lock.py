@@ -171,6 +171,18 @@ def verify_archive(lock_path: Path, archive: Path, output: Path | None = None) -
     print(json.dumps(result, ensure_ascii=False))
 
 
+def verify_directory(lock_path: Path, source: Path) -> None:
+    lock = json.loads(lock_path.read_text(encoding="utf-8"))
+    require(lock["schema"] == "opentitan-source-lock-v1", "lock schema")
+    require(source.is_dir(), "source directory missing")
+    tree, file_count = git_tree_from_directory(source)
+    require(tree == lock["tree_sha1"], "directory Git tree SHA-1")
+    require(file_count == lock["full_tree"]["file_count"], "directory Git file count")
+    print(json.dumps({"schema": "stage02-directory-verification-v1", "status": "PASS",
+                      "revision": lock["revision"], "tree_sha1": tree,
+                      "full_tree_file_count": file_count}, ensure_ascii=False))
+
+
 def git(repo: Path, *args: str) -> str:
     return subprocess.check_output(["git", "-C", str(repo), *args], text=True).strip()
 
@@ -371,13 +383,18 @@ def main() -> None:
     verify_archive_parser.add_argument("--lock", type=Path, required=True)
     verify_archive_parser.add_argument("--archive", type=Path, required=True)
     verify_archive_parser.add_argument("--output", type=Path)
+    verify_directory_parser = sub.add_parser("verify-directory")
+    verify_directory_parser.add_argument("--lock", type=Path, required=True)
+    verify_directory_parser.add_argument("--source", type=Path, required=True)
     args = parser.parse_args()
     if args.mode == "make-lock":
         make_lock(args.repo, args.archive, args.output)
     elif args.mode == "verify-server":
         verify_source(args.lock, args.root)
-    else:
+    elif args.mode == "verify-archive":
         verify_archive(args.lock, args.archive, args.output)
+    else:
+        verify_directory(args.lock, args.source)
 
 
 if __name__ == "__main__":

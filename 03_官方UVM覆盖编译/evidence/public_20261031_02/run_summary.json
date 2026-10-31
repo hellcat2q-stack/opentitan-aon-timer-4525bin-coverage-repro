@@ -1,0 +1,53 @@
+{
+  "schema": "stage03-official-aon-timer-smoke-v5-vcs2019-compat",
+  "run_id": "20261031_08",
+  "revision": "9f20940d494a223cc950a5b98f748fb28109d458",
+  "test": "aon_timer_smoke",
+  "uvm_test_seq": "aon_timer_smoke_vseq",
+  "fixed_seed": 42,
+  "simulator": "VCS P-2019.06-SP1",
+  "reporter": "URG P-2019.06-SP1 / CovDB 13.1",
+  "source_copy_verification": {
+    "schema": "stage02-directory-verification-v1",
+    "status": "PASS",
+    "revision": "9f20940d494a223cc950a5b98f748fb28109d458",
+    "tree_sha1": "4229b5d334cf7c02996856ddbdf625989b5a6b58",
+    "full_tree_file_count": 10514
+  },
+  "dvsim_exit_code": 0,
+  "phase_status": {
+    "build": [
+      1,
+      0,
+      1
+    ],
+    "run": [
+      1,
+      0,
+      1
+    ],
+    "cov_merge": [
+      1,
+      0,
+      1
+    ],
+    "cov_report": [
+      1,
+      0,
+      1
+    ]
+  },
+  "uvm_error_count": 0,
+  "uvm_fatal_count": 0,
+  "test_pass_marker": true,
+  "urg_number_of_tests": 1,
+  "urg_group_entries": 16,
+  "aon_timer_covergroups_found": [
+    "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+    "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+    "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+    "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg"
+  ],
+  "coverage_compatibility_patch": "vcs-2019-legacy-option-adaptation-v3",
+  "bin_denominator_frozen": false
+}

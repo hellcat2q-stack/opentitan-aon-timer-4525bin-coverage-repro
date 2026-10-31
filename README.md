@@ -17,8 +17,8 @@
 | 步骤 | 目标 | 状态 | 交接入口 |
 | --- | --- | --- | --- |
 | 01 | 验收服务器、VCS/URG 或 Verisim/Vericov、许可证和隔离目录 | 已完成（2026-10-31） | [阶段 01](01_服务器环境与许可证/README.md) |
-| 02 | 固定 revision `9f20940...`、DV 配置、依赖和工具版本 | 本地验收完成；推送待网络恢复 | [阶段 02](02_固定源码与依赖/README.md) |
-| 03 | 编译并通过官方 AON Timer UVM coverage smoke | 待开始 | [阶段 03](03_官方UVM覆盖编译/README.md) |
+| 02 | 固定 revision `9f20940...`、DV 配置、依赖和工具版本 | 已完成（2026-10-31；远端 SHA 已核对） | [阶段 02](02_固定源码与依赖/README.md) |
+| 03 | 编译并通过官方 AON Timer UVM coverage smoke | 已完成（2026-10-31；1/1 smoke、URG 报告通过） | [阶段 03](03_官方UVM覆盖编译/README.md) |
 | 04 | 从真实报告冻结 4525-bin manifest、排除和解析契约 | 待开始 | [阶段 04](04_4525-bin覆盖字典/README.md) |
 | 05 | 盘点全部官方测试，确定作者池和初始语料计划 | 待开始 | [阶段 05](05_官方测试池与初始计划/README.md) |
 | 06 | 运行初始语料，生成 4525 列 bin-by-run 矩阵 | 待开始 | [阶段 06](06_初始语料与bin矩阵/README.md) |
@@ -29,7 +29,7 @@
 
 每个阶段必须有 README 和 `实施记录.md`，按“做了什么、为什么、怎么做、文件放哪里、验收、局限”记录。完成一个阶段后再提交和推送，交给用户检查后才进入下一阶段。
 
-阶段 01 已在新的服务器隔离目录完成 VCS/URG P-2019.06-SP1、UVM 1.2、功能覆盖正/负对照和独立 Python 3.11.7 验收；[25 个脱敏证据文件](01_服务器环境与许可证/evidence/public_20261031_02/summary.json)已通过服务器和本机复核。阶段 02 已完成目标源码完整树核验、官方依赖离线安装、`pip check` 和 `dvsim.py --help` 导入探针；[阶段 02 证据](02_固定源码与依赖/evidence/public_20261031_01/dependencies_verified.json)记录了源码和依赖哈希。能力探针的 4/4 与 3/4 不属于 AON Timer 的实验结果；官方 UVM smoke 和最终覆盖分母仍待后续阶段核验。
+阶段 01 已在新的服务器隔离目录完成 VCS/URG P-2019.06-SP1、UVM 1.2、功能覆盖正/负对照和独立 Python 3.11.7 验收；[25 个脱敏证据文件](01_服务器环境与许可证/evidence/public_20261031_02/summary.json)已通过服务器和本机复核。阶段 02 已完成目标源码完整树核验、官方依赖离线安装、`pip check` 和 `dvsim.py --help` 导入探针；[阶段 02 证据](02_固定源码与依赖/evidence/public_20261031_01/dependencies_verified.json)记录了源码和依赖哈希。阶段 03 已完成官方 smoke、VCS coverage build、VDB merge 和 URG 报告；单次 smoke 的 45/4,525 只用于确认链路，最终覆盖分母和 manifest 仍待阶段 04 冻结。能力探针的 4/4 与 3/4 不属于 AON Timer 的实验结果。
 
 ## 资料入口
 

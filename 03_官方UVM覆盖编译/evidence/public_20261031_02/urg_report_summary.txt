@@ -1,0 +1,5 @@
+report_generation=PASS
+number_of_tests=1
+groups_in_smoke_report=16
+aon_timer_covergroups_found=4
+bin_denominator_status=not_frozen_in_stage03

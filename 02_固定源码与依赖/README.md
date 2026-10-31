@@ -1,6 +1,6 @@
 # 阶段 02：固定源码与依赖
 
-**状态：本地验收完成（2026-10-31）；GitHub 推送待网络恢复。** 目标 OpenTitan revision、完整 Git tree、AON Timer DV 配置、上游 Python 依赖和服务器工具版本均已锁定并在学校服务器复核。阶段 03 的官方 UVM 编译、仿真和真实 coverage smoke 尚未运行。
+**状态：已完成（2026-10-31）。** 目标 OpenTitan revision、完整 Git tree、AON Timer DV 配置、上游 Python 依赖和服务器工具版本均已锁定并在学校服务器复核；阶段 02 提交已推送并核对远端 SHA。阶段 03 的官方 UVM 编译、仿真和真实 coverage smoke 现已在下一阶段完成。
 
 ## 验收结果
 
@@ -55,4 +55,4 @@ python "02_固定源码与依赖/verify_dependencies.py" `
 
 ## Git 交付状态
 
-阶段变更已在本地提交，提交信息为 `02: lock OpenTitan source and DV dependencies`。向 `origin/main` 推送时，GitHub HTTPS 两次连接均超时；当前本地 `main` 比已知远端跟踪位置领先 1 个提交，远端 SHA 尚未复核。网络恢复后先推送并核对远端 SHA，再按阶段流程等待检查；本次没有开始阶段 03。
+阶段变更提交为 `2eb861b967e7f16a98189fd5cda36ed33fb34e9f`，提交信息为 `02: lock OpenTitan source and DV dependencies`。已执行 `git push origin main`，并用 `git fetch origin main` 核对 `HEAD` 与 `origin/main` 均为该 SHA。

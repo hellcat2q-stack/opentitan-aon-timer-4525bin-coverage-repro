@@ -1,0 +1,26 @@
+Testbench Group List
+
+Total Groups Coverage Summary
+COVERED EXPECTED SCORE  COVERED EXPECTED INST SCORE WEIGHT
+45      4525       0.99 45      4525       0.99     1
+
+
+Total groups in report: 16
+-------------------------------------------------------------------------------
+COVERED EXPECTED SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME
+0       3          0.00   0.00    1      100    1        1            64           64                    alert_esc_agent_pkg::alert_handshake_complete_cg
+0       1028       0.00 --        1      100    1        0            64           64                    aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg
+0       1028       0.00 --        1      100    1        0            64           64                    aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg
+0       20         0.00 --        1      100    1        0            64           64                    cip_base_pkg::intr_test_cg::SHAPE{(num_interrupts - 1)=1}
+0       15         0.00   0.00    1      100    1        1            64           64                    cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg
+0       2          0.00   0.00    1      100    1        1            64           64                    dv_base_reg_pkg::dv_base_lockable_field_cov::regwen_val_when_new_value_written_cg
+0       4          0.00   0.00    1      100    1        1            64           64                    dv_lib_pkg::bit_toggle_cg_wrap::bit_toggle_cg
+0       2          0.00   0.00    1      100    1        1            64           64                    tb.dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check.u_prim_onehot_check_if::prim_onehot_check_without_addr_fault_if_proxy::onehot_without_addr_fault_cg
+0       2          0.00   0.00    1      100    1        1            64           64                    tl_agent_pkg::pending_req_on_rst_cg
+4       2050       0.20 --        1      100    1        0            64           64                    aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg
+10      173        5.78 --        1      100    1        0            64           64                    aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg
+8       137        5.84   5.84    1      100    1        1            64           64                    tl_agent_pkg::tl_a_chan_cov_cg::SHAPE{(2 << ((valid_source_width - 1) - 1))=128}
+4       14        28.57  25.00    1      100    1        1            64           64                    cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg
+8       14        57.14 --        1      100    1        0            64           64                    cip_base_pkg::intr_cg::SHAPE{(num_interrupts - 1)=1}
+11      14        78.57 --        1      100    1        0            64           64                    cip_base_pkg::intr_pins_cg::SHAPE{(num_interrupts - 1)=1}
+1       1        100.00 100.00    1      100    1        1            64           64                    tl_agent_pkg::max_outstanding_cg::SHAPE{max_outstanding=1}

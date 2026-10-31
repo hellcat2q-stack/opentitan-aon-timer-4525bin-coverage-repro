@@ -1,0 +1,4 @@
+aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg
+aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg
+aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg
+aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg

@@ -1,0 +1,14 @@
+schema=stage03-official-aon-timer-smoke-v5-vcs2019-compat
+run_id=20261031_08
+revision=9f20940d494a223cc950a5b98f748fb28109d458
+test=aon_timer_smoke
+uvm_test_seq=aon_timer_smoke_vseq
+fixed_seed=42
+reseed=1
+coverage_enabled=true (--cov -> cov build mode; per-run VCS 2019 compatibility merges the coverage configs, removes unsupported -cm_common_hier, and removes xmerge performance-only -xprop=mmsopt)
+max_parallel=1
+retry_on_failure=false (--no-rerun)
+build_input=per-run copy of the locked source tree
+simulator=VCS P-2019.06-SP1
+reporter=URG P-2019.06-SP1 / CovDB 13.1
+scratch_isolated=true

@@ -1,0 +1,5 @@
+phase	passed	failed	total
+build	1	0	1
+cov_merge	1	0	1
+cov_report	1	0	1
+run	1	0	1

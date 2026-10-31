@@ -1,0 +1,9 @@
+compatibility_patch=vcs-2019-legacy-option-adaptation-v3
+original_vcs_hjson_sha256=c1d7a90be9c997d5b810522a99b395a90e1456c7bda5a3c6ea2c228f13e431f9
+patched_vcs_hjson_sha256=36d63ff6efdf2f66895829383762a0cd7e9b239f0d958181bdd51f8c474c945b
+original_common_sim_cfg_sha256=b134f0122f6d5551fd93124fb61be9ce6fbde83a528d0ef60682364d6c78bdf3
+patched_common_sim_cfg_sha256=f5a09c7083212749d17f37220dd3cd3a0aa71df24f26285be0b92e449858e60f
+merged_cov_cfg_sha256=add05176aa8299b187b53a96aceac980fecd69d4665d39b72943b578e26fc021
+change=remove -cm_common_hier and -xprop=mmsopt from per-run vcs.hjson; concatenate common_cov_excl.cfg before cover.cfg into one legacy VCS config; point default_vcs_cov_cfg_file to that merged file
+reason=VCS P-2019.06-SP1 rejects -cm_common_hier, treats -xprop=mmsopt as a second config file, and rejects the newer cover.cfg+common_cov_excl.cfg combined path; OpenTitan labels mmsopt a performance optimization
+scope=per-run source copy only; locked source tree and archive remain unchanged
