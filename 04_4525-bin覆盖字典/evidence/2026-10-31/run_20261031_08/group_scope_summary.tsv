@@ -1,0 +1,17 @@
+covergroup	type_expected	instance_score_expected	instance_count	per_instance
+alert_esc_agent_pkg::alert_handshake_complete_cg	3	3	1	1
+aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg	173	173	1	0
+aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg	2050	2050	1	0
+aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg	1028	1028	1	0
+aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg	1028	1028	1	0
+cip_base_pkg::intr_cg::SHAPE{(num_interrupts - 1)=1}	14	14	1	0
+cip_base_pkg::intr_pins_cg::SHAPE{(num_interrupts - 1)=1}	14	14	1	0
+cip_base_pkg::intr_test_cg::SHAPE{(num_interrupts - 1)=1}	20	20	1	0
+cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg	15	9	1	1
+cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg	14	12	1	1
+dv_base_reg_pkg::dv_base_lockable_field_cov::regwen_val_when_new_value_written_cg	2	8	4	1
+dv_lib_pkg::bit_toggle_cg_wrap::bit_toggle_cg	4	24	6	1
+tb.dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check.u_prim_onehot_check_if::prim_onehot_check_without_addr_fault_if_proxy::onehot_without_addr_fault_cg	2	2	1	1
+tl_agent_pkg::max_outstanding_cg::SHAPE{max_outstanding=1}	1	1	1	1
+tl_agent_pkg::pending_req_on_rst_cg	2	2	1	1
+tl_agent_pkg::tl_a_chan_cov_cg::SHAPE{(2 << ((valid_source_width - 1) - 1))=128}	137	137	1	1

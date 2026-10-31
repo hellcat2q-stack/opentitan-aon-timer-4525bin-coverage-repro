@@ -1,0 +1,28 @@
+{
+  "aon_timer_eligible_bins": 4279,
+  "expanded_instance_bin_records": 4533,
+  "generic_eligible_bins": 246,
+  "manifest_sha256": "f38e257ed763cb3f009233560f57d04f05d46735c95a2862ee072b4068aa2683",
+  "raw_report_sha256": {
+    "cov_merge_testbench.cumulative.xml": "deb810d05ae4f3df4b7b8ba50a15be6866d2d71619c9995165a28074e0a7fa7f",
+    "cov_merge_testbench.inst.xml": "ee0927b78acc12d935ffa928f664f32a5777a8047174661095f6944d64c2d9a7",
+    "cov_report_groups.txt": "a908811ad903e54e7b1664ab4e3e4b45d20e6fad90da34f0ebef838ba4dcf8a3",
+    "cov_report_grpinfo.txt": "813244a01cc256738b1cf2352bf7e924db8e9f730eb235612ed7a51439bde3ec",
+    "expand_groups.txt": "3e4103e72e223453e056890e6f30b7e788f1c336b2e110732373bdb57b2c4b17",
+    "expand_grpinfo.txt": "1fa900274352b6cd65247c5ab79fa5a83d4b3140cc6c7e92cfc98e18a083c8a9"
+  },
+  "run_id": "20261031_08",
+  "schema_version": "opentitan-aon-timer-functional-4525-v1",
+  "source_commit": "9f20940d494a223cc950a5b98f748fb28109d458",
+  "urg_instance_score": {
+    "covered": 45,
+    "expected": 4525,
+    "score_percent": 0.99
+  },
+  "urg_type_aggregate": {
+    "covered": 46,
+    "expected": 4507,
+    "score_percent": 1.02
+  },
+  "weight_zero_exclusions": 8
+}
