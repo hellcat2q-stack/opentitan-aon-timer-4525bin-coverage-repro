@@ -1,0 +1,13 @@
+# Ignore local/server artifacts
+.stage_review/
+prepared/
+pilot_prepared/
+*.vdb/
+*.zdb
+simv*
+*.so
+*.o
+*.a
+*.key
+*.lic
+*.token

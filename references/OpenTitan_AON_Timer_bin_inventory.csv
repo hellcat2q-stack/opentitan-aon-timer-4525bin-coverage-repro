@@ -1,0 +1,20 @@
+covergroup,expected_bins,covered_bins,uncovered_bins,scope
+watchdog_timer_bite_thold_hit_cg,1028,351,677,AON Timer
+watchdog_timer_bark_thold_hit_cg,1028,355,673,AON Timer
+wake_up_timer_thold_hit_cg,2050,1040,1010,AON Timer
+timer_cfg_cg,173,169,4,AON Timer
+AON Timer own total,4279,1915,2364,AON Timer
+alert_handshake_complete_cg,3,3,0,common testbench
+intr_cg,14,14,0,common testbench
+intr_pins_cg,14,14,0,common testbench
+intr_test_cg,20,13,7,common testbench
+tl_errors_cg,15,12,3,common testbench
+tl_intg_err_cg,14,13,1,common testbench
+regwen_val_when_new_value_written_cg,2,2,0,common testbench
+bit_toggle_cg,4,4,0,common testbench
+onehot_without_addr_fault_cg,2,2,0,common testbench
+max_outstanding_cg,1,1,0,common testbench
+pending_req_on_rst_cg,2,1,1,common testbench
+tl_a_chan_cov_cg,137,137,0,common testbench
+common testbench total,246,238,8,common testbench
+ALL group bins,4525,2153,2372,all groups
