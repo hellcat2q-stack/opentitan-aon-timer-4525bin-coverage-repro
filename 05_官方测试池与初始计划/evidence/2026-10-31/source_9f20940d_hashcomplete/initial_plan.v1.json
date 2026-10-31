@@ -1,0 +1,31 @@
+{
+  "candidate_count": 17,
+  "gates_before_stage06": [
+    "Run the initial corpus with the Stage 04 source/config/tool contract.",
+    "Compare coverage-definition signatures for default and cover_reg_top build modes before merging reports.",
+    "If a build mode changes the manifest, assign a new manifest schema and do not mix its matrix columns.",
+    "Record failed runs and simulator seeds; do not silently retry into the corpus."
+  ],
+  "initial_corpus": {
+    "parallelism": 1,
+    "planned_runs": 17,
+    "purpose": "establish candidate-to-bin reachability before adaptive scheduling",
+    "reseed": "one run per candidate in Stage 06; official per-test reseed defaults remain recorded in the inventory",
+    "scheduler_seed": 42,
+    "seed_policy": "fixed simulation seed 42 for each initial candidate run",
+    "selection": "one coverage-enabled run for every candidate job"
+  },
+  "manifest_schema": "opentitan-aon-timer-functional-4525-v1",
+  "paper_parameters": {
+    "logical_batch_size": 10,
+    "logical_batches": 100,
+    "parallel_workers": 10,
+    "random_seed_numeric_value_disclosed": false,
+    "same_initial_corpus_for_all_methods": true,
+    "source_note": "Values transcribed from the user-provided IM-1175.pdf; the exact initial corpus and numeric paper seed are not specified.",
+    "submitted_simulations": 1000
+  },
+  "schema_version": "opentitan-aon-timer-initial-plan-v1",
+  "status": "REGISTERED_PLAN_NOT_EXECUTED",
+  "test_pool_schema": "opentitan-aon-timer-test-pool-v1"
+}

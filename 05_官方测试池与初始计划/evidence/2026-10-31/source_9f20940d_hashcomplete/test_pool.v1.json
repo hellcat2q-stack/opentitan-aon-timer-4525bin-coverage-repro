@@ -1,0 +1,693 @@
+{
+  "candidate_count": 17,
+  "candidates": [
+    {
+      "build_mode": "default",
+      "category": "aon_timer_native",
+      "configuration_origin": "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson",
+      "coverage_candidate": true,
+      "id": "test_a3ee188863d10f36ff6b",
+      "name": "aon_timer_smoke",
+      "reseed": 50,
+      "reseed_origin": "sim_cfg_default",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson",
+        "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_smoke_vseq.sv"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "smoke"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_smoke_vseq"
+    },
+    {
+      "build_mode": "default",
+      "category": "aon_timer_native",
+      "configuration_origin": "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson",
+      "coverage_candidate": true,
+      "id": "test_52dc9b9526e46ef2fc12",
+      "name": "aon_timer_prescaler",
+      "reseed": 50,
+      "reseed_origin": "sim_cfg_default",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson",
+        "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_prescaler_vseq.sv"
+      ],
+      "stage": "V2",
+      "testpoints": [
+        "prescaler"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_prescaler_vseq"
+    },
+    {
+      "build_mode": "default",
+      "category": "aon_timer_native",
+      "configuration_origin": "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson",
+      "coverage_candidate": true,
+      "id": "test_448d8b224a35a4fa1275",
+      "name": "aon_timer_jump",
+      "reseed": 50,
+      "reseed_origin": "sim_cfg_default",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson",
+        "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_jump_vseq.sv"
+      ],
+      "stage": "V2",
+      "testpoints": [
+        "jump"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_jump_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_csr",
+      "configuration_origin": "csr_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_02a7c342b7f01d3f8150",
+      "name": "aon_timer_csr_hw_reset",
+      "reseed": 5,
+      "reseed_origin": "csr_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+csr_hw_reset",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/csr_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "csr_hw_reset",
+        "tl_d_outstanding_access",
+        "tl_d_partial_access"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_csr",
+      "configuration_origin": "csr_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_60ed200d70d257562a9b",
+      "name": "aon_timer_csr_rw",
+      "reseed": 20,
+      "reseed_origin": "csr_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+csr_rw",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/csr_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "csr_rw",
+        "regwen_csr_and_corresponding_lockable_csr",
+        "tl_d_outstanding_access",
+        "tl_d_partial_access"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_csr",
+      "configuration_origin": "csr_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_5756b083aead0e86dd4e",
+      "name": "aon_timer_csr_bit_bash",
+      "reseed": 5,
+      "reseed_origin": "csr_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+csr_bit_bash",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/csr_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "csr_bit_bash"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_csr",
+      "configuration_origin": "csr_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_7b1287a8e4b65200fcf1",
+      "name": "aon_timer_csr_aliasing",
+      "reseed": 5,
+      "reseed_origin": "csr_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+csr_aliasing",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/csr_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "csr_aliasing",
+        "regwen_csr_and_corresponding_lockable_csr",
+        "tl_d_outstanding_access",
+        "tl_d_partial_access"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_csr",
+      "configuration_origin": "csr_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_2fefd01e3ce58284c45b",
+      "name": "aon_timer_same_csr_outstanding",
+      "reseed": 20,
+      "reseed_origin": "csr_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_same_csr_outstanding",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/csr_tests.hjson",
+        "hw/dv/tools/dvsim/testplans/tl_device_access_types_testplan.hjson"
+      ],
+      "stage": "V2",
+      "testpoints": [
+        "tl_d_outstanding_access",
+        "tl_d_partial_access"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_csr",
+      "configuration_origin": "csr_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_b985bdd2f40851cf9e42",
+      "name": "aon_timer_csr_mem_rw_with_rand_reset",
+      "reseed": 20,
+      "reseed_origin": "csr_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_csr_mem_rw_with_rand_reset",
+        "+test_timeout_ns=10000000000",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/csr_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "csr_mem_rw_with_rand_reset"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_memory",
+      "configuration_origin": "mem_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_dd1057e32142848ba6cd",
+      "name": "aon_timer_mem_walk",
+      "reseed": 5,
+      "reseed_origin": "mem_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+csr_mem_walk",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/mem_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "mem_walk"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_memory",
+      "configuration_origin": "mem_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_e8e78ba0bb9c5a36a9b9",
+      "name": "aon_timer_mem_partial_access",
+      "reseed": 5,
+      "reseed_origin": "mem_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_mem_partial_access",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/mem_tests.hjson"
+      ],
+      "stage": "V1",
+      "testpoints": [
+        "mem_partial_access"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "cip_interrupt",
+      "configuration_origin": "intr_test.hjson",
+      "coverage_candidate": true,
+      "id": "test_d004606a3d548edb2cff",
+      "name": "aon_timer_intr_test",
+      "reseed": 50,
+      "reseed_origin": "intr_test.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_intr_test"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/intr_test.hjson"
+      ],
+      "stage": "V2",
+      "testpoints": [
+        "intr_test"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "tl_error",
+      "configuration_origin": "tl_access_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_e50c7f027056f1c4e092",
+      "name": "aon_timer_tl_errors",
+      "reseed": 20,
+      "reseed_origin": "tl_access_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_tl_errors"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/tl_access_tests.hjson",
+        "hw/dv/tools/dvsim/testplans/tl_device_access_types_testplan.hjson"
+      ],
+      "stage": "V2",
+      "testpoints": [
+        "tl_d_oob_addr_access",
+        "tl_d_illegal_access"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "cover_reg_top",
+      "category": "tl_error",
+      "configuration_origin": "tl_access_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_70f447208ea6dadbce49",
+      "name": "aon_timer_tl_intg_err",
+      "reseed": 20,
+      "reseed_origin": "tl_access_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_tl_intg_err",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/tl_access_tests.hjson"
+      ],
+      "stage": "V2S",
+      "testpoints": [
+        "tl_intg_err",
+        "sec_cm_bus_integrity"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "default",
+      "category": "security_countermeasure",
+      "configuration_origin": "sec_cm_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_c6ded32de3a603740f96",
+      "name": "aon_timer_sec_cm",
+      "reseed": 5,
+      "reseed_origin": "sec_cm_tests.hjson",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_sec_cm_fi",
+        "+en_scb=0"
+      ],
+      "run_timeout_mins": null,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/sec_cm_tests.hjson",
+        "hw/dv/tools/dvsim/testplans/tl_device_access_types_testplan.hjson"
+      ],
+      "stage": "V2S",
+      "testpoints": [
+        "tl_intg_err"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    },
+    {
+      "build_mode": "default",
+      "category": "stress",
+      "configuration_origin": "stress_all_test.hjson",
+      "coverage_candidate": true,
+      "id": "test_7d778d2afde63b9d862d",
+      "name": "aon_timer_stress_all",
+      "reseed": 50,
+      "reseed_origin": "sim_cfg_default",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+test_timeout_ns=10000000000"
+      ],
+      "run_timeout_mins": 180,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/stress_all_test.hjson",
+        "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_stress_all_vseq.sv"
+      ],
+      "stage": "V2",
+      "testpoints": [
+        "stress_all"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_stress_all_vseq"
+    },
+    {
+      "build_mode": "default",
+      "category": "stress",
+      "configuration_origin": "stress_tests.hjson",
+      "coverage_candidate": true,
+      "id": "test_02b2cc283ffdd25205d6",
+      "name": "aon_timer_stress_all_with_rand_reset",
+      "reseed": 50,
+      "reseed_origin": "sim_cfg_default",
+      "run_opts": [
+        "+UVM_NO_RELNOTES",
+        "+UVM_VERBOSITY=UVM_LOW",
+        "+cdc_instrumentation_enabled=1",
+        "+run_stress_all_with_rand_reset",
+        "+test_timeout_ns=10000000000",
+        "+stress_seq=aon_timer_stress_all_vseq"
+      ],
+      "run_timeout_mins": 180,
+      "schema_gate": "compare coverage-definition signature with Stage 04 before merge",
+      "source_files": [
+        "hw/dv/tools/dvsim/tests/stress_tests.hjson",
+        "hw/dv/tools/dvsim/testplans/stress_all_with_reset_testplan.hjson"
+      ],
+      "stage": "V3",
+      "testpoints": [
+        "stress_all_with_rand_reset"
+      ],
+      "uvm_test": "aon_timer_base_test",
+      "uvm_test_seq": "aon_timer_common_vseq"
+    }
+  ],
+  "manifest_schema": "opentitan-aon-timer-functional-4525-v1",
+  "paper": {
+    "exact_aon_timer_regression_pool_disclosed": false,
+    "file": "IM-1175.pdf",
+    "note": "The paper describes an accessible regression subset but does not list exact test job names; names here come from the locked OpenTitan revision.",
+    "sha256": "ec0ad3b7b3f3c83d2355e96f820d56903ba352f3f6f8b79b30e132571108fe56"
+  },
+  "registered_sequences": [
+    "aon_timer_base_vseq",
+    "aon_timer_smoke_vseq",
+    "aon_timer_prescaler_vseq",
+    "aon_timer_jump_vseq",
+    "aon_timer_common_vseq",
+    "aon_timer_stress_all_vseq"
+  ],
+  "schema_version": "opentitan-aon-timer-test-pool-v1",
+  "shared_test_templates": {
+    "hw/dv/tools/dvsim/tests/csr_tests.hjson": [
+      "{name}_csr_hw_reset",
+      "{name}_csr_rw",
+      "{name}_csr_bit_bash",
+      "{name}_csr_aliasing",
+      "{name}_same_csr_outstanding",
+      "{name}_csr_mem_rw_with_rand_reset"
+    ],
+    "hw/dv/tools/dvsim/tests/intr_test.hjson": [
+      "{name}_intr_test"
+    ],
+    "hw/dv/tools/dvsim/tests/mem_tests.hjson": [
+      "{name}_mem_walk",
+      "{name}_mem_partial_access"
+    ],
+    "hw/dv/tools/dvsim/tests/sec_cm_tests.hjson": [
+      "{name}_sec_cm"
+    ],
+    "hw/dv/tools/dvsim/tests/stress_all_test.hjson": [
+      "{name}_stress_all"
+    ],
+    "hw/dv/tools/dvsim/tests/stress_tests.hjson": [
+      "{name}_stress_all_with_rand_reset"
+    ],
+    "hw/dv/tools/dvsim/tests/tl_access_tests.hjson": [
+      "{name}_tl_errors",
+      "{name}_tl_intg_err"
+    ]
+  },
+  "simulation_contract": {
+    "common_run_opts": [
+      "+UVM_NO_RELNOTES",
+      "+UVM_VERBOSITY=UVM_LOW",
+      "+cdc_instrumentation_enabled=1"
+    ],
+    "coverage_mode_plusargs": [
+      "+en_cov=1"
+    ],
+    "default_reseed": 50,
+    "ip_build_modes_declared": [],
+    "shared_build_mode_used_by_imported_tests": "cover_reg_top",
+    "simulation_mode": "cov",
+    "tool": "VCS P-2019.06-SP1"
+  },
+  "source": {
+    "open_titan_commit": "9f20940d494a223cc950a5b98f748fb28109d458",
+    "source_archive_sha256": "8db9ef1c8a125d57b95f3ee294742ac8fdb14aeec0d2ac950efc3a99c22d65a3",
+    "source_tree_sha1": "4229b5d334cf7c02996856ddbdf625989b5a6b58"
+  },
+  "source_file_sha256": {
+    "hw/dv/sv/cip_lib/seq_lib/cip_base_vseq.sv": {
+      "bytes": 48616,
+      "sha256": "9563ceeb1b0cacc6582e6ce6ba43cef760626708d3f05aeaa925c4417531868f"
+    },
+    "hw/dv/sv/cip_lib/seq_lib/cip_base_vseq__sec_cm_fi.svh": {
+      "bytes": 3531,
+      "sha256": "400815d33b40f39e346b3646671bad2a6a3b9cc08674e43e11b52ac4d9e83032"
+    },
+    "hw/dv/sv/cip_lib/seq_lib/cip_base_vseq__tl_errors.svh": {
+      "bytes": 23728,
+      "sha256": "f4369056a15323ac8f56ce11e142c970f25ab4d6375fc995b679c62fce94e957"
+    },
+    "hw/dv/sv/dv_lib/dv_base_vseq.sv": {
+      "bytes": 12062,
+      "sha256": "2c5cd5419f3bb6c0976c6dd21b9cf588adea61fd64a332febdc66bafa9c63a4b"
+    },
+    "hw/dv/tools/dvsim/common_modes.hjson": {
+      "bytes": 2928,
+      "sha256": "cfcf55da5d6c3206e976069ba38c1868edc8dbb3fa8151eca82527b16e65145b"
+    },
+    "hw/dv/tools/dvsim/common_sim_cfg.hjson": {
+      "bytes": 5551,
+      "sha256": "5978ae0ad0f734af3b93cc09ca479fd15000f7905214670197d8dd96ce27c46b"
+    },
+    "hw/dv/tools/dvsim/testplans/csr_testplan.hjson": {
+      "bytes": 4906,
+      "sha256": "710b4e5a0eb3174419922ba82b8b327805a7ac727aa675da43435ef84a18664d"
+    },
+    "hw/dv/tools/dvsim/testplans/intr_test_testplan.hjson": {
+      "bytes": 1099,
+      "sha256": "857ff928bdf6bd70a00972a35497cbbac49e6e99b01248cb7bd72880f69379ea"
+    },
+    "hw/dv/tools/dvsim/testplans/mem_testplan.hjson": {
+      "bytes": 1040,
+      "sha256": "f1007bc2c7e4949a92643ea1a5cd98b9d4fa73fb395e19c4a550e6d948d48ec0"
+    },
+    "hw/dv/tools/dvsim/testplans/stress_all_with_reset_testplan.hjson": {
+      "bytes": 525,
+      "sha256": "a744f7b8a1464fb17347a909bc18d1e54067858894a3cd3054486c42ff985b6c"
+    },
+    "hw/dv/tools/dvsim/testplans/tl_device_access_types_testplan.hjson": {
+      "bytes": 1470,
+      "sha256": "bda094a3a8a87e2b60089ff947e40bf962d23dd3ffc743a9e8d2dc66fefe8a14"
+    },
+    "hw/dv/tools/dvsim/testplans/tl_device_access_types_wo_intg_testplan.hjson": {
+      "bytes": 2912,
+      "sha256": "c1c6d392ba1d713883595407ede2abebfb15daf6e2374e3ec495aa0f005b138a"
+    },
+    "hw/dv/tools/dvsim/tests/csr_tests.hjson": {
+      "bytes": 1885,
+      "sha256": "f7271979644dc4e40ddcf90a36bbe94bc15a7c9191bfa4c3ae81a6801748ec36"
+    },
+    "hw/dv/tools/dvsim/tests/intr_test.hjson": {
+      "bytes": 439,
+      "sha256": "f6413034e2cc9a2b56d9ca8d56904826b515c6f87f2e18553e993a24971e3ad4"
+    },
+    "hw/dv/tools/dvsim/tests/mem_tests.hjson": {
+      "bytes": 889,
+      "sha256": "14162f19659800ae1e0a7729afe6553f5291033f759c9bc86934034f83313648"
+    },
+    "hw/dv/tools/dvsim/tests/sec_cm_tests.hjson": {
+      "bytes": 347,
+      "sha256": "11fe0f164702453588ceba18437e8174632d6f6209cfa295e3b4dfc55692fd5f"
+    },
+    "hw/dv/tools/dvsim/tests/stress_all_test.hjson": {
+      "bytes": 597,
+      "sha256": "686f7c89010940ebc5dfa3c7327c3cca92feefbb5d776891988ca510f33a8eb9"
+    },
+    "hw/dv/tools/dvsim/tests/stress_tests.hjson": {
+      "bytes": 654,
+      "sha256": "d18232b185efebcff7c74f01f0d67b4e3a818c772229f7e274787253b64948ab"
+    },
+    "hw/dv/tools/dvsim/tests/tl_access_tests.hjson": {
+      "bytes": 633,
+      "sha256": "acbc4bfbb21a8becfcf5f064fa97011d9519be9f4b11c3b7805dc5a071ebf093"
+    },
+    "hw/ip/aon_timer/data/aon_timer.hjson": {
+      "bytes": 10210,
+      "sha256": "ccd7f55c32be35af9b7a744036ad259ac1e2aa252da365a8124b0df5ba48abb5"
+    },
+    "hw/ip/aon_timer/data/aon_timer_sec_cm_testplan.hjson": {
+      "bytes": 1382,
+      "sha256": "438a7f84c2d0d436979b4286cb6226267329fd89b0c3bd30e4506a8ccf3cfe6e"
+    },
+    "hw/ip/aon_timer/data/aon_timer_testplan.hjson": {
+      "bytes": 3820,
+      "sha256": "0c44b7b69197262e9bd576e5849403ed7e19a25064a1fd4d80d273f4e9e1c747"
+    },
+    "hw/ip/aon_timer/dv/aon_timer_sim.core": {
+      "bytes": 642,
+      "sha256": "74c5301c5839a26b71490dac341695c4fd68b66a6dc053863de1295a4dcb21c7"
+    },
+    "hw/ip/aon_timer/dv/aon_timer_sim_cfg.hjson": {
+      "bytes": 2252,
+      "sha256": "8baefe06267bfa01fa930c2739fbbe36946d587d18e7cd0dfce912fd5788be04"
+    },
+    "hw/ip/aon_timer/dv/env/aon_timer_env.core": {
+      "bytes": 1398,
+      "sha256": "becd930059841184fee5a8776ecebfe2ea4ed5966b6faba3db4a557deef2138d"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_base_vseq.sv": {
+      "bytes": 7548,
+      "sha256": "6e739b9600e10d18df8315c6634b51e5a9a993f5364b710051a3a48491232555"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv": {
+      "bytes": 459,
+      "sha256": "21b5a46dbd6f8f76a46dfcced7ef8609220e5ed7f9f42f9ba00bd3d7e0af4f67"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_jump_vseq.sv": {
+      "bytes": 1898,
+      "sha256": "6dad2f8167f782bfde1904cc0706d1d534671bb61f672bd6d2a4d230175e146b"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_prescaler_vseq.sv": {
+      "bytes": 1450,
+      "sha256": "135000f9e11e3ca0d13eabc590d810cc195381c4a961126aea83a7987a2ee843"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_smoke_vseq.sv": {
+      "bytes": 967,
+      "sha256": "8ed27b2692b88669d741eda03573943179a6d2f291f74f48599dffa56a2c8219"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_stress_all_vseq.sv": {
+      "bytes": 1567,
+      "sha256": "1677da4fe226292d256485e86679c3fe6f9e9e83eafbfa974d9e11ff0fddabac"
+    },
+    "hw/ip/aon_timer/dv/env/seq_lib/aon_timer_vseq_list.sv": {
+      "bytes": 399,
+      "sha256": "4d2ed3e81f7ab0787b682ddc40bd664e036881d22710d53bc43472acc64cecc6"
+    },
+    "hw/ip/aon_timer/dv/tests/aon_timer_test.core": {
+      "bytes": 520,
+      "sha256": "cd5c55fdc5343a715bc9106a8d0c619dc52595716f5e1f73e34a3fd286e2d50a"
+    }
+  }
+}
