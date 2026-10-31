@@ -1,0 +1,15 @@
+{
+  "schema_version": "opentitan-aon-timer-stage08-online-job-v1",
+  "coverage_schema": "opentitan-aon-timer-functional-4525-v1",
+  "scheduler_source": "07_覆盖聚类与UCB调度/evidence/public_20261101_stage07/dryrun/events.jsonl",
+  "submission_id": "s000001",
+  "policy_id": "p000001",
+  "target_cluster": "c0033",
+  "sequence": "aon_timer_sec_cm",
+  "test": "aon_timer_sec_cm",
+  "scheduler_stimulus_seed": 341807780,
+  "actual_vcs_fixed_seed": 42,
+  "run_id": "20261101_online_01_aon_timer_sec_cm",
+  "seed_handoff": "fixed_project_seed_42; scheduler stimulus seed retained as metadata and not applied by this compatibility smoke",
+  "new_vcs_run": true
+}

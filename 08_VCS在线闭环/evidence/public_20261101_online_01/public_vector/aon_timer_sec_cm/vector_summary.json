@@ -1,0 +1,16 @@
+{
+  "schema_version": "opentitan-aon-timer-bin-vector-v1",
+  "manifest_schema": "opentitan-aon-timer-functional-4525-v1",
+  "item": "aon_timer_sec_cm",
+  "seed": 42,
+  "expected_bins": 4525,
+  "hit_bins": 11,
+  "coverage_percent": 0.243094,
+  "vector_sha256": "e5febd5f1b8ac5805e19a4d381fb4909cd654085eaa8e9d74bc0d91414621dbc",
+  "input_sha256": {
+    "groups.txt": "f6881ec2d3b6ecd0dcaf2c443f79b6ef3cdac563dfcb6303d96cc201aedab61b",
+    "grpinfo.txt": "ead06a74560ee251bd055a1d1e961d3bf745a026763c28d2f254a81b976206eb",
+    "testbench.cumulative.xml": "d7d45dc99fcf8cbb401faea58c8b1716bd21e9a04d0e6021076b5d1b958ec1af",
+    "testbench.inst.xml": "9a49a5f7e9e6185cb767c978692556666675fefc28afe69ab394eac0c94ebe7b"
+  }
+}
