@@ -1,0 +1,13 @@
+{
+  "schema": "aon-timer-stage06-matrix-verification-v1",
+  "manifest_sha256": "f38e257ed763cb3f009233560f57d04f05d46735c95a2862ee072b4068aa2683",
+  "status_sha256": "257c8e34fb722857bd6df765793869e728d9e9c08753be97721ca53b528196f4",
+  "matrix_sha256": "bf052a8fc8bcbf388867fefb5116a14e2dc1f967a2200d21256f21c08b318eaf",
+  "union_sha256": "af34afb3038cdb2cc717feee47f7c7fc19e7d7eb92eb5a693b1d28751588377a",
+  "eligible_bins": 4525,
+  "candidate_count": 17,
+  "successful_run_count": 17,
+  "failed_run_count": 0,
+  "initial_union_bin_count": 376,
+  "passed": true
+}

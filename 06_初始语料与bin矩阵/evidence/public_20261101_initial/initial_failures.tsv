@@ -1,0 +1,5 @@
+initial_index	item	run_id	return_code	failure_class	resolution
+4	aon_timer_csr_hw_reset	20261101_initial_04_aon_timer_csr_hw_reset	1	legacy_vcs_coverage_config_rejected	separate default and cover_reg_top coverage config files in per-run wrapper
+5	aon_timer_csr_rw	20261101_initial_05_aon_timer_csr_rw	1	legacy_vcs_coverage_config_rejected	separate default and cover_reg_top coverage config files in per-run wrapper
+6	aon_timer_csr_bit_bash	20261101_initial_06_aon_timer_csr_bit_bash	1	legacy_vcs_coverage_config_rejected	separate default and cover_reg_top coverage config files in per-run wrapper
+7	aon_timer_csr_aliasing	20261101_initial_07_aon_timer_csr_aliasing	1	legacy_vcs_coverage_config_rejected	separate default and cover_reg_top coverage config files in per-run wrapper
