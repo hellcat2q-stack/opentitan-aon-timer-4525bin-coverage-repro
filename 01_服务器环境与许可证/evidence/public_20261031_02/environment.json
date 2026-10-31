@@ -1,0 +1,57 @@
+{
+  "schema": "stage01-environment-capability-v1",
+  "observed_at_utc": "2026-10-31T07:34:18.713351+00:00",
+  "project_root": "$HOME/opentitan_aon_timer_4525bin_repro",
+  "os": "Red Hat Enterprise Linux Server release 7.9 (Maipo)",
+  "kernel": "3.10.0-1160.el7.x86_64",
+  "architecture": "x86_64",
+  "glibc": "glibc 2.17",
+  "logical_cpu_count": 80,
+  "memory_total_bytes": 540035252224,
+  "memory_available_bytes": 76329455616,
+  "disk_free_bytes": 18588575531008,
+  "resource_note": "Shared-server snapshot, not reserved capacity; probe workers=1.",
+  "tools_on_path": {
+    "vcs": true,
+    "urg": true,
+    "verisim": false,
+    "vericov": false,
+    "gcc": true,
+    "make": true,
+    "timeout": true
+  },
+  "gcc": "4.8.5",
+  "system_python": "Python 3.6.8",
+  "isolated_python": "3.11.7",
+  "venv_isolated": true,
+  "stdlib": {
+    "ssl": "OpenSSL 3.0.13 30 Jan 2024",
+    "sqlite3": "3.41.2",
+    "zlib": "1.2.13"
+  },
+  "license_environment_presence": {
+    "SNPSLMD_LICENSE_FILE": true,
+    "LM_LICENSE_FILE": true
+  },
+  "inherited_ld_preload_present": true,
+  "dependency_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.5.2",
+    "hjson": "3.1.0",
+    "PyYAML": "6.0.2",
+    "Jinja2": "3.1.6",
+    "packaging": "24.2",
+    "psutil": "6.1.1",
+    "pip": "23.2.1",
+    "setuptools": "65.5.0"
+  },
+  "dependency_smoke": "PASS",
+  "synthetic_dbscan_labels": [
+    0,
+    0,
+    -1
+  ],
+  "official_opentitan_dependencies": "Deferred to Stage 02 after pinning revision"
+}

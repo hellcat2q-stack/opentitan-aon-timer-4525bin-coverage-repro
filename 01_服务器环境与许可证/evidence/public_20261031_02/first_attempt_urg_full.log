@@ -1,0 +1,15 @@
+Note: Bumping stack limit from 8192 to unlimited Kbytes.
+URG Version P-2019.06-SP1 Copyright (c) 1991-2019 by Synopsys Inc.
+
+Warning-[URG-NMT] No matching test
+  The entry 'full_seed42' in the -tests file does not match any test in the 
+  directories given to the -dir option.
+  Please verify the -tests file contains valid entries. You may use -show 
+  availabletests to list all the available tests.
+
+
+Error-[URG-NTF] No tests found
+  None of the entries in the -tests file are valid test names for the 
+  directories specified with the -dir flag.
+  You can use urg -show availabletests to get the list of valid test names.
+

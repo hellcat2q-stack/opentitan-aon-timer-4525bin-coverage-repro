@@ -1,0 +1,11 @@
+# Standalone analysis prerequisites for Python 3.11 / glibc 2.17.
+# This does not replace the pinned OpenTitan revision's Stage 02 dependencies.
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.3
+scikit-learn==1.5.2
+hjson==3.1.0
+PyYAML==6.0.2
+Jinja2==3.1.6
+packaging==24.2
+psutil==6.1.1

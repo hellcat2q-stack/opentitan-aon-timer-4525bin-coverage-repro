@@ -1,0 +1,21 @@
+Dashboard
+
+Date: Sat Oct 31 15:25:41 2026
+
+User: <USER>
+
+Version: P-2019.06-SP1
+Command line: urg -full64 -dir $ROOT/scratch/01/20261031_02/probe.vdb -tests $ROOT/scratch/01/20261031_02/partial.tests -metric group -format both -show ratios -group ratio -report $ROOT/scratch/01/20261031_02/report_partial
+Number of tests: 1
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE   GROUP      
+ 75.00   75.00 3/4 
+
+
+-------------------------------------------------------------------------------
+Total Groups Coverage Summary 
+COVERED EXPECTED SCORE  COVERED EXPECTED INST SCORE WEIGHT 
+3       4         75.00 3       4         75.00     1      
+

@@ -1,0 +1,6 @@
+timeout --signal=TERM --kill-after=10s 300s env -u LD_PRELOAD vcs -full64 -sverilog -ntb_opts uvm-1.2 -timescale=1ns/1ps -top capability_probe -cm line -cm_dir $ROOT/scratch/01/20261031_02/probe.vdb -o $ROOT/scratch/01/20261031_02/simv capability_probe.sv 
+timeout --signal=TERM --kill-after=10s 120s env -u LD_PRELOAD $ROOT/scratch/01/20261031_02/simv +ntb_random_seed=42 -cm line -cm_dir $ROOT/scratch/01/20261031_02/probe.vdb -cm_name full_seed42 
+timeout --signal=TERM --kill-after=10s 120s env -u LD_PRELOAD $ROOT/scratch/01/20261031_02/simv +ntb_random_seed=42 +PROBE_PARTIAL -cm line -cm_dir $ROOT/scratch/01/20261031_02/probe.vdb -cm_name partial_seed42 
+timeout --signal=TERM --kill-after=10s 120s env -u LD_PRELOAD urg -full64 -dir $ROOT/scratch/01/20261031_02/probe.vdb -show availabletests 
+timeout --signal=TERM --kill-after=10s 120s env -u LD_PRELOAD urg -full64 -dir $ROOT/scratch/01/20261031_02/probe.vdb -tests $ROOT/scratch/01/20261031_02/full.tests -metric group -format both -show ratios -group ratio -report $ROOT/scratch/01/20261031_02/report_full 
+timeout --signal=TERM --kill-after=10s 120s env -u LD_PRELOAD urg -full64 -dir $ROOT/scratch/01/20261031_02/probe.vdb -tests $ROOT/scratch/01/20261031_02/partial.tests -metric group -format both -show ratios -group ratio -report $ROOT/scratch/01/20261031_02/report_partial 

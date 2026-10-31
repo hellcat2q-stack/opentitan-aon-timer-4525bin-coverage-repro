@@ -1,0 +1,67 @@
+Chronologic VCS simulator copyright 1991-2019
+Contains Synopsys proprietary information.
+Compiler version P-2019.06-SP1_Full64; Runtime version P-2019.06-SP1_Full64;  Oct 31 15:25 2026
+UVM_INFO $VCS_HOME/etc/uvm-1.2/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release P-2019.06-SP1_Full64 Copyright (c) 1991-2019 by Synopsys Inc.
+
+Note-[FCICIO] Instance coverage is ON
+$ROOT/scratch/01/20261031_02/capability_probe.sv, 13
+stage01_probe_pkg, "stage01_probe_pkg::stage01_capability_test::capability_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'stage01_probe_pkg::stage01_capability_test::capability_cg'
+  
+  Covergroup Instance: capability_probe.me.obj.capability_cg 
+  Design hierarchy: stage01_probe_pkg
+
+UVM_INFO @ 0: reporter [RNTST] Running test stage01_capability_test...
+UVM_INFO capability_probe.sv(43) @ 4000: uvm_test_top [STAGE01_PROBE] CAPABILITY_PROBE_OK samples=4 coverage=100.00
+UVM_INFO $VCS_HOME/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 4000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO $VCS_HOME/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 4000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[STAGE01_PROBE]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "$VCS_HOME/etc/uvm-1.2/base/uvm_root.svh", line 613.
+$finish at simulation time                 4000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4000 ps
+CPU Time:      0.570 seconds;       Data structure size:   0.3Mb
+Sat Oct 31 15:25:38 2026

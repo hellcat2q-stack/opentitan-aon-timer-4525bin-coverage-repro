@@ -1,0 +1,12 @@
+Testbench Group List
+
+Total Groups Coverage Summary 
+COVERED EXPECTED SCORE  COVERED EXPECTED INST SCORE WEIGHT 
+3       4         75.00 3       4         75.00     1      
+
+
+Total groups in report: 1
+-------------------------------------------------------------------------------
+COVERED EXPECTED SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                                      
+3       4         75.00  75.00    1      100    1        1            64           64                    stage01_probe_pkg::stage01_capability_test::capability_cg 
+

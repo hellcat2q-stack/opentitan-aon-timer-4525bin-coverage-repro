@@ -1,0 +1,10 @@
+Note: Bumping stack limit from 8192 to unlimited Kbytes.
+URG Version P-2019.06-SP1 Copyright (c) 1991-2019 by Synopsys Inc.
+Available tests names:
+$ROOT/scratch/01/20261031_02/probe/full_seed42
+$ROOT/scratch/01/20261031_02/probe/partial_seed42
+
+Note-[URG-NR] No report generated
+  Reports will not be generated because of the -show option.
+  To generate reports omit this option.
+

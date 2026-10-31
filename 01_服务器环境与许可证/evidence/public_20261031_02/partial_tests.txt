@@ -1,0 +1,12 @@
+Tests
+
+Total Coverage Summary 
+SCORE   GROUP      
+ 75.00   75.00 3/4 
+
+
+Total tests in report: 1
+-------------------------------------------------------------------------------
+Data from the following tests was used to generate this report
+$ROOT/scratch/01/20261031_02/probe/partial_seed42 
+

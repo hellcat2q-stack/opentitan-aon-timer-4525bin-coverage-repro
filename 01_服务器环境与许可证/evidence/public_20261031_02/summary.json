@@ -1,0 +1,39 @@
+{
+  "schema": "stage01-capability-result-v1",
+  "status": "PASS",
+  "run_id": "20261031_02",
+  "checked_at_utc": "2026-10-31T07:36:21.397239+00:00",
+  "vcs_and_urg": "P-2019.06-SP1",
+  "uvm": "1.2",
+  "probe_seed": 42,
+  "workers": 1,
+  "final_attempt_simulations": 2,
+  "total_probe_simulations_including_first_attempt": 4,
+  "functional_probe_results": {
+    "full": {
+      "covered": 4,
+      "expected": 4,
+      "percent": 100.0,
+      "reported_tests": 1
+    },
+    "partial": {
+      "covered": 3,
+      "expected": 4,
+      "percent": 75.0,
+      "reported_tests": 1
+    }
+  },
+  "license_validation": "Real compile, simulation and URG report generation succeeded at check time",
+  "installer": {
+    "filename": "Miniconda3-py311_24.1.2-0-Linux-x86_64.sh",
+    "sha256": "3f2e5498e550a6437f15d9cc8020d52742d0ba70976ee8fce4f0daefa3992d2e",
+    "publisher_index": "https://repo.anaconda.com/miniconda/"
+  },
+  "limitations": [
+    "Generic tool capability probe, not official AON Timer UVM smoke",
+    "4525/4279 denominator and target revision not verified",
+    "Single-worker license access only; 10 concurrent licenses not tested",
+    "OpenTitan dependencies and simulator compatibility deferred to Stages 02-03",
+    "Server package-index DNS failed; Python wheels installed offline"
+  ]
+}
