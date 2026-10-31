@@ -24,7 +24,7 @@
 | 06 | 运行初始语料，生成 4525 列 bin-by-run 矩阵 | 已完成（2026-11-01；17/17 通过，初始并集 376 bins） | [阶段 06](06_初始语料与bin矩阵/README.md) |
 | 07 | 按 4000+ bin 规模建立聚类、信息量和 UCB 调度器 | 已完成（2026-11-01；184 clusters，dry-run 仅回放） | [阶段 07](07_覆盖聚类与UCB调度/README.md) |
 | 08 | 接入真实在线仿真，验证异步补位和覆盖反馈 | 已完成（2026-11-01；1 个真实 VCS smoke） | [阶段 08](08_VCS在线闭环/README.md) |
-| 09 | 完成 Random、Full 和消融对照，预算和 seed 预注册 | 待开始 | [阶段 09](09_随机与方法对照/README.md) |
+| 09 | 完成 Random、Full 和消融对照，预算和 seed 预注册 | 已完成预注册；正式对照未执行（2026-11-01） | [阶段 09](09_随机与方法对照/README.md) |
 | 10 | 两端复核、最终报告、证据索引和 GitHub 交付 | 待开始 | [阶段 10](10_最终复核与交接/README.md) |
 
 每个阶段必须有 README 和 `实施记录.md`，按“做了什么、为什么、怎么做、文件放哪里、验收、局限”记录。完成一个阶段后再提交和推送，交给用户检查后才进入下一阶段。
@@ -33,6 +33,7 @@
 阶段 06 已完成 [17 个独立向量和 4,525×17 矩阵](06_初始语料与bin矩阵/evidence/public_20261101_initial/verification.json)；全部候选返回码为 0，seed 42，初始并集命中 376 个 eligible bins。阶段 06 的 VDB、simv 和完整日志仍保留在服务器隔离目录，公开仓库只保存 URG/XML 派生文本、向量和哈希。
 阶段 07 已完成 [184 个确定性 clusters、初始分数和 scheduler 输入](07_覆盖聚类与UCB调度/evidence/public_20261101_stage07/verification.json)；32 submission/3 workers 的 dry-run 只回放已有阶段 06 向量，没有启动新的 VCS。
 阶段 08 已完成 [1 个真实 VCS 在线反馈 smoke](08_VCS在线闭环/evidence/public_20261101_online_01/verification.json)；`aon_timer_sec_cm`、seed 42、4,525 列向量和返回码 0 已独立复核。scheduler 派生 stimulus seed 仍未接入真实 wrapper，阶段 08 结果不等同论文规模在线闭环。
+阶段 09 已完成 [预注册配置](09_随机与方法对照/preregistration.v1.json) 和 [静态校验](09_随机与方法对照/evidence/public_20261101_stage09/verification.json)；六种方法、1000 次提交、10 workers、seed 42、失败分母和 4525/4279 双分母已冻结。正式对照尚未启动，当前不得把阶段 06 初始矩阵或阶段 07 replay-only dry-run 当作阶段 09 结果；seed handoff 和多 worker 许可仍是执行闸门。
 
 ## 资料入口
 

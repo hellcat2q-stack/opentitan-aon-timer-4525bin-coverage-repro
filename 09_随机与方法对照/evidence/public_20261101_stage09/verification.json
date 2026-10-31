@@ -1,0 +1,33 @@
+{
+  "schema_version": "opentitan-aon-timer-stage09-prereg-verification-v1",
+  "preregistration_sha256": "76d3b17122b3f6036e3c755bdba26bbefa4f70ea3fce55dfab5e644d35e5f77a",
+  "checked_inputs": {
+    "manifest": {
+      "path": "06_初始语料与bin矩阵/evidence/public_20261101_initial/coverage_manifest.v1.json",
+      "sha256": "f38e257ed763cb3f009233560f57d04f05d46735c95a2862ee072b4068aa2683"
+    },
+    "test_pool": {
+      "path": "05_官方测试池与初始计划/evidence/2026-10-31/source_9f20940d_hashcomplete/test_pool.v1.json",
+      "sha256": "9330c76701ac9edb214bdba7b85e2f602573b1f8294b39b87594fd03357f84e6"
+    },
+    "initial_plan": {
+      "path": "05_官方测试池与初始计划/evidence/2026-10-31/source_9f20940d_hashcomplete/initial_plan.v1.json",
+      "sha256": "f2fbc0fac931e1f7b89ba14b5a554c1cec5b59ec4cd8567b1ffefa183aa8c4e6"
+    },
+    "clusters": {
+      "path": "07_覆盖聚类与UCB调度/evidence/public_20261101_stage07/clusters/clusters.json",
+      "sha256": "0341045fe5f4eba10965a3c543b943dd511a62daa98f5bfd42023506138772ee"
+    },
+    "scheduler_inputs": {
+      "path": "07_覆盖聚类与UCB调度/evidence/public_20261101_stage07/scores/scheduler_inputs.json",
+      "sha256": "b06a11a7429699bf6dd4e4411e991db5a01cbbfa027b7b580ec352a3617e81ee"
+    }
+  },
+  "method_count": 6,
+  "total_submissions": 1000,
+  "workers": 10,
+  "root_seed": 42,
+  "formal_execution_started": false,
+  "execution_gate": "BLOCKED_UNTIL_SEED_AND_LICENSE_CHECK",
+  "passed": true
+}
