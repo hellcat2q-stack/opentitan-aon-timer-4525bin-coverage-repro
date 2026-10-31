@@ -34,10 +34,11 @@
 - [4000-bin 资料说明](references/OpenTitan_AON_Timer_复现资料.md)
 - [bin inventory 快照](references/OpenTitan_AON_Timer_bin_inventory.csv)
 - [实验设计和不可混用规则](docs/实验设计.md)
-- [给下一个 Codex 的交接文档](docs/给下一个Codex的任务说明.md)
+- [给下一个 Codex 的交接文档](docs/给下一个Codex的任务说明.md)`n- [GitHub 创建与推送](docs/GitHub创建与推送.md)
 - [长期接手规则](AGENTS.md)
 
 ## 服务器隔离约定
 
 真实 VCS/URG 数据、VDB、simv、许可证和原始大日志只放在学校服务器新建的专用目录，例如 `$HOME/opentitan_aon_timer_4525bin_repro`。GitHub 只提交可公开的脚本、配置、清单、脱敏文本证据和哈希索引；绝不提交私钥、token、许可证配置、商业 VDB 或二进制。
+
 
