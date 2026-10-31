@@ -1,0 +1,13 @@
+{
+  "schema": "stage02-source-verification-v1",
+  "status": "PASS",
+  "revision": "9f20940d494a223cc950a5b98f748fb28109d458",
+  "tree_sha1": "4229b5d334cf7c02996856ddbdf625989b5a6b58",
+  "full_tree_file_count": 10514,
+  "archive_sha256": "8db9ef1c8a125d57b95f3ee294742ac8fdb14aeec0d2ac950efc3a99c22d65a3",
+  "key_files_verified": 48,
+  "aon_timer_files_verified": 45,
+  "coverage_definition_markers_verified": true,
+  "tool_versions_file": "tool_versions.json",
+  "source_compatibility_patches": []
+}

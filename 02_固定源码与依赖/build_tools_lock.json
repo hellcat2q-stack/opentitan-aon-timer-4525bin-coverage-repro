@@ -1,0 +1,24 @@
+{
+  "schema": "opentitan-build-tools-lock-v1",
+  "purpose": "Hash-pinned offline build prerequisites for upstream source distributions",
+  "tools": [
+    {
+      "name": "wheel",
+      "version": "0.45.1",
+      "filename": "wheel-0.45.1-py3-none-any.whl",
+      "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248",
+      "source": "https://pypi.org/project/wheel/0.45.1/",
+      "reason": "Provides the bdist_wheel command needed to prepare pinned source distributions"
+    },
+    {
+      "name": "setuptools-scm",
+      "version": "8.2.0",
+      "filename": "setuptools_scm-8.2.0-py3-none-any.whl",
+      "sha256": "136e2b1d393d709d2bcf26f275b8dec06c48b811154167b0fd6bb002aad17d6d",
+      "source": "https://pypi.org/project/setuptools-scm/8.2.0/",
+      "reason": "Satisfies the setup_requires entry in the pinned FuseSoC source archive"
+    }
+  ],
+  "runtime_dependency_packaging": "packaging==24.2 from the upstream OpenTitan lock",
+  "included_in_upstream_python_requirements": false
+}

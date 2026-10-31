@@ -1,0 +1,9 @@
+{
+  "schema": "opentitan-offline-dependency-bundle-v1",
+  "filename": "opentitan-wheels.tar",
+  "sha256": "3cbb013320dfd000057659d33cee33676009b2c912e863f16a0c9d1552d346c8",
+  "bytes": 71321600,
+  "manifest_path_in_archive": "wheels/SHA256SUMS",
+  "verified_package_file_count": 83,
+  "manifest_public_evidence": "evidence/public_20261031_01/wheels_SHA256SUMS.txt"
+}

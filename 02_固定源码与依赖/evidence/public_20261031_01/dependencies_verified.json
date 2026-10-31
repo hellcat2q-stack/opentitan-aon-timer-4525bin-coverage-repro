@@ -1,0 +1,27 @@
+{
+  "bootstrap_environment_extras": {
+    "pip": "23.2.1",
+    "setuptools": "65.5.0"
+  },
+  "build_tools_verified": {
+    "setuptools-scm": "8.2.0",
+    "wheel": "0.45.1"
+  },
+  "installed_distribution_count": 87,
+  "offline_bundle_sha256": "3cbb013320dfd000057659d33cee33676009b2c912e863f16a0c9d1552d346c8",
+  "offline_package_files_verified": 83,
+  "pinned_version_matches": 80,
+  "pip_check": "PASS",
+  "revision": "9f20940d494a223cc950a5b98f748fb28109d458",
+  "schema": "stage02-dependency-verification-v1",
+  "source_tree_file_count": 10514,
+  "source_tree_sha1": "4229b5d334cf7c02996856ddbdf625989b5a6b58",
+  "status": "PASS",
+  "upstream_archive_requirements_present": {
+    "chipwhisperer": "5.6.1",
+    "edalize": "0.4.0",
+    "fusesoc": "0.5.dev0"
+  },
+  "upstream_requirement_count": 83,
+  "upstream_requirements_sha256": "40427b0849dbb9711f3cc3acb85a12907d0942232e4c4f4fe1f5094b1dd9e955"
+}

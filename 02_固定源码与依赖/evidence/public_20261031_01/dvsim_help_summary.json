@@ -1,0 +1,12 @@
+{
+  "command": "<venv-python> -B <revision-source>/util/dvsim/dvsim.py --help",
+  "exit_code": 0,
+  "output_bytes": 9707,
+  "output_lines": 179,
+  "output_sha256": "a4899c34bdd56be11d2c3182252d12b8a8a780f60d1e3b4c0d8c2f1b51edce8e",
+  "revision": "9f20940d494a223cc950a5b98f748fb28109d458",
+  "schema": "stage02-dvsim-help-probe-v1",
+  "scope": "Python dependency/import and CLI help check only; no compile, simulation, or coverage report",
+  "status": "PASS",
+  "tree_sha1": "4229b5d334cf7c02996856ddbdf625989b5a6b58"
+}

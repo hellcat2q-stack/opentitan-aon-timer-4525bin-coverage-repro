@@ -1,5 +1,7 @@
 # Ignore local/server artifacts
 .stage_review/
+__pycache__/
+*.py[cod]
 prepared/
 pilot_prepared/
 *.vdb/

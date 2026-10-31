@@ -1,0 +1,9 @@
+{
+  "vcs_ID": "VCS P-2019.06-SP1",
+  "urg_version": "URG Version P-2019.06-SP1; CovDB version: 13.1",
+  "python": "Python 3.11.7",
+  "gcc": "gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)",
+  "dvsim_on_path": false,
+  "verisim_on_path": false,
+  "vericov_on_path": false
+}
