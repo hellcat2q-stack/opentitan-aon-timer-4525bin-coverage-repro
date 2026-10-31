@@ -1,0 +1,16 @@
+{
+  "budget": 32,
+  "completed": 30,
+  "event_count": 95,
+  "events_sha256": "9394a077042027d85b163db2f4357a00734207a1c118e5ce13ea593ca01367ee",
+  "final_covered_bin_count": 376,
+  "final_state_sha256": "27e604081baaa1000cd3bc30fcb0148834f5be2c22d6f933845d8e103262d838",
+  "initial_covered_bin_count": 376,
+  "mode": "dry_run_replay",
+  "new_vcs_runs": 0,
+  "replay_only": true,
+  "schema_version": "opentitan-aon-timer-stage07-dryrun-v1",
+  "seed": 42,
+  "submitted": 32,
+  "workers": 3
+}

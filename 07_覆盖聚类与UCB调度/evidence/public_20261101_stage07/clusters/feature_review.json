@@ -1,0 +1,868 @@
+{
+  "features": [
+    {
+      "bin_id": "bin_0cde846a6b21b243c5fa426e4d0dc50217cd12074f1432a4937eef71bea1e552",
+      "bin_name": "alert_triggered",
+      "bin_type": "coverpoint",
+      "component": "alert_esc_agent",
+      "coverage_scope": "instance",
+      "covergroup": "alert_esc_agent_pkg::alert_handshake_complete_cg",
+      "covergroup_base": "alert_esc_agent_pkg::alert_handshake_complete_cg",
+      "coverpoint_or_cross": "cp_trans_type",
+      "is_cross": false,
+      "normalized_text": "alert esc agent pkg alert esc agent pkg alert handshake complete cg cp trans type alert triggered",
+      "numeric_buckets": [],
+      "numeric_literals": [],
+      "source_file": "hw/dv/sv/alert_esc_agent/alert_esc_agent_cov.sv",
+      "source_line": 12,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "agent",
+        "alert",
+        "cg",
+        "complete",
+        "component:alert_esc_agent",
+        "cp",
+        "esc",
+        "group:alert esc agent pkg alert handshake complete cg",
+        "handshake",
+        "kind:coverpoint",
+        "numbers:none",
+        "pkg",
+        "point:cp trans type",
+        "scope:instance",
+        "structural:coverpoint",
+        "trans",
+        "triggered",
+        "type"
+      ]
+    },
+    {
+      "bin_id": "bin_001e040060cd09be9b5c1a08551f40be2e0e4c9709acdf5bf0a31eac1fba81d3",
+      "bin_name": "auto[b200000000000000:b27fffffffffffff]",
+      "bin_type": "coverpoint",
+      "component": "aon_timer",
+      "coverage_scope": "type_aggregate",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "covergroup_base": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "coverpoint_or_cross": "wkup_thold_cp",
+      "is_cross": false,
+      "normalized_text": "aon timer env pkg aon timer env pkg aon timer env cov wake up timer thold hit cg wkup thold cp auto b200000000000000 b27fffffffffffff",
+      "numeric_buckets": [
+        "small",
+        "zero"
+      ],
+      "numeric_literals": [
+        0,
+        7
+      ],
+      "source_file": "hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv",
+      "source_line": 66,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "aon",
+        "auto",
+        "b200000000000000",
+        "b27fffffffffffff",
+        "cg",
+        "component:aon_timer",
+        "cov",
+        "cp",
+        "env",
+        "group:aon timer env pkg aon timer env cov wake up timer thold hit cg",
+        "hit",
+        "kind:coverpoint",
+        "number_bucket:small",
+        "number_bucket:zero",
+        "pkg",
+        "point:wkup thold cp",
+        "scope:type_aggregate",
+        "structural:coverpoint",
+        "thold",
+        "timer",
+        "up",
+        "wake",
+        "wkup"
+      ]
+    },
+    {
+      "bin_id": "bin_006535b5cc64c6a66eae9813df5022cad846ede0bfc0263001731da38cdee3e5",
+      "bin_name": "values[1]",
+      "bin_type": "coverpoint",
+      "component": "cip_lib",
+      "coverage_scope": "instance",
+      "covergroup": "cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg",
+      "covergroup_base": "cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg",
+      "coverpoint_or_cross": "cp_num_cmd_err_bits",
+      "is_cross": false,
+      "normalized_text": "cip base pkg cip base pkg tl intg err cg wrap tl intg err cg cp num cmd err bits values <num>",
+      "numeric_buckets": [
+        "one"
+      ],
+      "numeric_literals": [
+        1
+      ],
+      "source_file": "hw/dv/sv/cip_lib/cip_base_env_cov.sv",
+      "source_line": 146,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "<num>",
+        "base",
+        "bits",
+        "cg",
+        "cip",
+        "cmd",
+        "component:cip_lib",
+        "cp",
+        "err",
+        "group:cip base pkg tl intg err cg wrap tl intg err cg",
+        "intg",
+        "kind:coverpoint",
+        "num",
+        "number_bucket:one",
+        "pkg",
+        "point:cp num cmd err bits",
+        "scope:instance",
+        "structural:coverpoint",
+        "tl",
+        "values",
+        "wrap"
+      ]
+    },
+    {
+      "bin_id": "bin_29558938feeaad5ce3c98af0804829c1e753659582617b3de2ea9fb64e72b6c1",
+      "bin_name": "auto[0]",
+      "bin_type": "coverpoint",
+      "component": "dv_base_reg",
+      "coverage_scope": "instance",
+      "covergroup": "dv_base_reg_pkg::dv_base_lockable_field_cov::regwen_val_when_new_value_written_cg",
+      "covergroup_base": "dv_base_reg_pkg::dv_base_lockable_field_cov::regwen_val_when_new_value_written_cg",
+      "coverpoint_or_cross": "cp_regwen",
+      "is_cross": false,
+      "normalized_text": "dv base reg pkg dv base reg pkg dv base lockable field cov regwen val when new value written cg cp regwen auto <num>",
+      "numeric_buckets": [
+        "zero"
+      ],
+      "numeric_literals": [
+        0
+      ],
+      "source_file": "hw/dv/sv/dv_base_reg/dv_base_lockable_field_cov.sv",
+      "source_line": 23,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "<num>",
+        "auto",
+        "base",
+        "cg",
+        "component:dv_base_reg",
+        "cov",
+        "cp",
+        "dv",
+        "field",
+        "group:dv base reg pkg dv base lockable field cov regwen val when new value written cg",
+        "kind:coverpoint",
+        "lockable",
+        "new",
+        "number_bucket:zero",
+        "pkg",
+        "point:cp regwen",
+        "reg",
+        "regwen",
+        "scope:instance",
+        "structural:coverpoint",
+        "val",
+        "value",
+        "when",
+        "written"
+      ]
+    },
+    {
+      "bin_id": "bin_0262c565ed5345f73aee58b279a6f4444071137b7948863acb5b4f9f6e5b38c7",
+      "bin_name": "auto[0]",
+      "bin_type": "coverpoint",
+      "component": "dv_lib",
+      "coverage_scope": "instance",
+      "covergroup": "dv_lib_pkg::bit_toggle_cg_wrap::bit_toggle_cg",
+      "covergroup_base": "dv_lib_pkg::bit_toggle_cg_wrap::bit_toggle_cg",
+      "coverpoint_or_cross": "cp_value",
+      "is_cross": false,
+      "normalized_text": "dv lib pkg dv lib pkg bit toggle cg wrap bit toggle cg cp value auto <num>",
+      "numeric_buckets": [
+        "zero"
+      ],
+      "numeric_literals": [
+        0
+      ],
+      "source_file": "hw/dv/sv/dv_lib/dv_base_env_cov.sv",
+      "source_line": 14,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "<num>",
+        "auto",
+        "bit",
+        "cg",
+        "component:dv_lib",
+        "cp",
+        "dv",
+        "group:dv lib pkg bit toggle cg wrap bit toggle cg",
+        "kind:coverpoint",
+        "lib",
+        "number_bucket:zero",
+        "pkg",
+        "point:cp value",
+        "scope:instance",
+        "structural:coverpoint",
+        "toggle",
+        "value",
+        "wrap"
+      ]
+    },
+    {
+      "bin_id": "bin_18538e4c188b2c6e000c0e9b62f6b177ee25880c1ba8f0a7d4530a022cece245",
+      "bin_name": "hit",
+      "bin_type": "coverpoint",
+      "component": "sec_cm",
+      "coverage_scope": "instance",
+      "covergroup": "tb.dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check.u_prim_onehot_check_if::prim_onehot_check_without_addr_fault_if_proxy::onehot_without_addr_fault_cg",
+      "covergroup_base": "tb.dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check.u_prim_onehot_check_if::prim_onehot_check_without_addr_fault_if_proxy::onehot_without_addr_fault_cg",
+      "coverpoint_or_cross": "cp_onehot_fault",
+      "is_cross": false,
+      "normalized_text": "tb dut u reg u prim reg we check u prim onehot check u prim onehot check if tb dut u reg u prim reg we check u prim onehot check u prim onehot check if prim onehot check without addr fault if proxy onehot without addr fault cg cp onehot fault hit",
+      "numeric_buckets": [],
+      "numeric_literals": [],
+      "source_file": "hw/dv/sv/sec_cm/prim_onehot_check_if.sv",
+      "source_line": 179,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "addr",
+        "cg",
+        "check",
+        "component:sec_cm",
+        "cp",
+        "dut",
+        "fault",
+        "group:tb dut u reg u prim reg we check u prim onehot check u prim onehot check if prim onehot check without addr fault if proxy onehot without addr fault cg",
+        "hit",
+        "if",
+        "kind:coverpoint",
+        "numbers:none",
+        "onehot",
+        "point:cp onehot fault",
+        "prim",
+        "proxy",
+        "reg",
+        "scope:instance",
+        "structural:coverpoint",
+        "tb",
+        "u",
+        "we",
+        "without"
+      ]
+    },
+    {
+      "bin_id": "bin_01d9e53d9c62f73117a4ebac82ed979509c79dcc9b6af2a1baee50bea320e959",
+      "bin_name": "valid_sources[0x38]",
+      "bin_type": "coverpoint",
+      "component": "tl_agent",
+      "coverage_scope": "instance",
+      "covergroup": "tl_agent_pkg::tl_a_chan_cov_cg::SHAPE{(2 << ((valid_source_width - 1) - 1))=128}",
+      "covergroup_base": "tl_agent_pkg::tl_a_chan_cov_cg",
+      "coverpoint_or_cross": "cp_source",
+      "is_cross": false,
+      "normalized_text": "tl agent pkg tl agent pkg tl a chan cov cg cp source valid sources <hex>",
+      "numeric_buckets": [
+        "medium"
+      ],
+      "numeric_literals": [
+        56
+      ],
+      "source_file": "hw/dv/sv/tl_agent/tl_agent_cov.sv",
+      "source_line": 44,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "<hex>",
+        "a",
+        "agent",
+        "cg",
+        "chan",
+        "component:tl_agent",
+        "cov",
+        "cp",
+        "group:tl agent pkg tl a chan cov cg",
+        "kind:coverpoint",
+        "number_bucket:medium",
+        "pkg",
+        "point:cp source",
+        "scope:instance",
+        "source",
+        "sources",
+        "structural:coverpoint",
+        "tl",
+        "valid"
+      ]
+    },
+    {
+      "bin_id": "bin_0022119f5b6bac66d52b66bb10b4dc59650bdbeba88e93193861f91f494ab907",
+      "bin_name": "auto[2f00000000000000:2f7fffffffffffff]",
+      "bin_type": "coverpoint",
+      "component": "aon_timer",
+      "coverage_scope": "type_aggregate",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "covergroup_base": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "coverpoint_or_cross": "wkup_count_cp",
+      "is_cross": false,
+      "normalized_text": "aon timer env pkg aon timer env pkg aon timer env cov wake up timer thold hit cg wkup count cp auto 2f00000000000000 2f7fffffffffffff",
+      "numeric_buckets": [
+        "small",
+        "zero"
+      ],
+      "numeric_literals": [
+        2,
+        0,
+        2
+      ],
+      "source_file": "hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv",
+      "source_line": 65,
+      "structural_type": "coverpoint",
+      "tokens": [
+        "2f00000000000000",
+        "2f7fffffffffffff",
+        "aon",
+        "auto",
+        "cg",
+        "component:aon_timer",
+        "count",
+        "cov",
+        "cp",
+        "env",
+        "group:aon timer env pkg aon timer env cov wake up timer thold hit cg",
+        "hit",
+        "kind:coverpoint",
+        "number_bucket:small",
+        "number_bucket:zero",
+        "pkg",
+        "point:wkup count cp",
+        "scope:type_aggregate",
+        "structural:coverpoint",
+        "thold",
+        "timer",
+        "up",
+        "wake",
+        "wkup"
+      ]
+    },
+    {
+      "bin_id": "bin_00b8f77c844226d178177a892ba388116a64f2d081f48a09e0cc13b78bc0fb48",
+      "bin_name": "wdog_thold_cp=auto[2902458368:2919235583] x wdog_bite_rst=auto[0]",
+      "bin_type": "cross",
+      "component": "aon_timer",
+      "coverage_scope": "type_aggregate",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "covergroup_base": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_thold_cpXwdog_bite_rst",
+      "is_cross": true,
+      "normalized_text": "aon timer env pkg aon timer env pkg aon timer env cov watchdog timer bite thold hit cg wdog thold cpxwdog bite rst wdog thold cp auto <num> <num> x wdog bite rst auto <num>",
+      "numeric_buckets": [
+        "large",
+        "zero"
+      ],
+      "numeric_literals": [
+        2902458368,
+        2919235583,
+        0
+      ],
+      "source_file": "hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv",
+      "source_line": 85,
+      "structural_type": "cross",
+      "tokens": [
+        "<num>",
+        "aon",
+        "auto",
+        "bite",
+        "cg",
+        "component:aon_timer",
+        "cov",
+        "cp",
+        "cpxwdog",
+        "env",
+        "group:aon timer env pkg aon timer env cov watchdog timer bite thold hit cg",
+        "hit",
+        "kind:cross",
+        "number_bucket:large",
+        "number_bucket:zero",
+        "pkg",
+        "point:wdog thold cpxwdog bite rst",
+        "rst",
+        "scope:type_aggregate",
+        "structural:cross",
+        "thold",
+        "timer",
+        "watchdog",
+        "wdog",
+        "x"
+      ]
+    }
+  ],
+  "partition_summary": [
+    {
+      "bin_count": 1,
+      "component": "alert_esc_agent",
+      "covergroup": "alert_esc_agent_pkg::alert_handshake_complete_cg",
+      "coverpoint_or_cross": "alert_handshake_complete",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "alert_esc_agent",
+      "covergroup": "alert_esc_agent_pkg::alert_handshake_complete_cg",
+      "coverpoint_or_cross": "cp_handshake_complete",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "alert_esc_agent",
+      "covergroup": "alert_esc_agent_pkg::alert_handshake_complete_cg",
+      "coverpoint_or_cross": "cp_trans_type",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 34,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "bark_thold_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 2
+    },
+    {
+      "bin_count": 34,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "bite_thold_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 2
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "pause_in_sleep_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 34,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "prescale_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 2
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "wdog_regwen_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "wkup_cause_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 66,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::timer_cfg_cg",
+      "coverpoint_or_cross": "wkup_thold_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 3
+    },
+    {
+      "bin_count": 512,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "coverpoint_or_cross": "wkup_count_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 16
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "coverpoint_or_cross": "wkup_int_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 512,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "coverpoint_or_cross": "wkup_thold_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 16
+    },
+    {
+      "bin_count": 1024,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::wake_up_timer_thold_hit_cg",
+      "coverpoint_or_cross": "wkup_thold_cpXwkup_int_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 32
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_bark_int",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_bark_int_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 256,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_count_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 8
+    },
+    {
+      "bin_count": 256,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_thold_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 8
+    },
+    {
+      "bin_count": 512,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bark_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_thold_cpXwdog_bark_rst",
+      "dbscan_clusters": 1,
+      "final_clusters": 16
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_bite_rst",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_bite_rst_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 256,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_count_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 8
+    },
+    {
+      "bin_count": 256,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_thold_cp",
+      "dbscan_clusters": 1,
+      "final_clusters": 8
+    },
+    {
+      "bin_count": 512,
+      "component": "aon_timer",
+      "covergroup": "aon_timer_env_pkg::aon_timer_env_cov::watchdog_timer_bite_thold_hit_cg",
+      "coverpoint_or_cross": "wdog_thold_cpXwdog_bite_rst",
+      "dbscan_clusters": 1,
+      "final_clusters": 16
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_cg",
+      "coverpoint_or_cross": "cp_intr",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_cg",
+      "coverpoint_or_cross": "cp_intr_en",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_cg",
+      "coverpoint_or_cross": "cp_intr_state",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 8,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_cg",
+      "coverpoint_or_cross": "intr_cg_cc",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_pins_cg",
+      "coverpoint_or_cross": "cp_intr_pin",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 4,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_pins_cg",
+      "coverpoint_or_cross": "cp_intr_pin_value",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 8,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_pins_cg",
+      "coverpoint_or_cross": "cp_intr_pins_all_values",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_test_cg",
+      "coverpoint_or_cross": "cp_intr",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_test_cg",
+      "coverpoint_or_cross": "cp_intr_en",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_test_cg",
+      "coverpoint_or_cross": "cp_intr_state",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_test_cg",
+      "coverpoint_or_cross": "cp_intr_test",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 12,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::intr_test_cg",
+      "coverpoint_or_cross": "intr_test_cg_cc",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg",
+      "coverpoint_or_cross": "cp_csr_size_err",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg",
+      "coverpoint_or_cross": "cp_instr_type_err",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg",
+      "coverpoint_or_cross": "cp_tl_protocol_err",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg",
+      "coverpoint_or_cross": "cp_unmapped_err",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_errors_cg_wrap::tl_errors_cg",
+      "coverpoint_or_cross": "cp_write_w_instr_type_err",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 4,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg",
+      "coverpoint_or_cross": "cp_num_cmd_err_bits",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 4,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg",
+      "coverpoint_or_cross": "cp_num_data_err_bits",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 4,
+      "component": "cip_lib",
+      "covergroup": "cip_base_pkg::tl_intg_err_cg_wrap::tl_intg_err_cg",
+      "coverpoint_or_cross": "cp_tl_intg_err_type",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 8,
+      "component": "dv_base_reg",
+      "covergroup": "dv_base_reg_pkg::dv_base_lockable_field_cov::regwen_val_when_new_value_written_cg",
+      "coverpoint_or_cross": "cp_regwen",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 12,
+      "component": "dv_lib",
+      "covergroup": "dv_lib_pkg::bit_toggle_cg_wrap::bit_toggle_cg",
+      "coverpoint_or_cross": "cp_transitions",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 12,
+      "component": "dv_lib",
+      "covergroup": "dv_lib_pkg::bit_toggle_cg_wrap::bit_toggle_cg",
+      "coverpoint_or_cross": "cp_value",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "sec_cm",
+      "covergroup": "tb.dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check.u_prim_onehot_check_if::prim_onehot_check_without_addr_fault_if_proxy::onehot_without_addr_fault_cg",
+      "coverpoint_or_cross": "cp_onehot_enable_fault",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "sec_cm",
+      "covergroup": "tb.dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check.u_prim_onehot_check_if::prim_onehot_check_without_addr_fault_if_proxy::onehot_without_addr_fault_cg",
+      "coverpoint_or_cross": "cp_onehot_fault",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::max_outstanding_cg",
+      "coverpoint_or_cross": "cp_num_of_outstanding",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 2,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::pending_req_on_rst_cg",
+      "coverpoint_or_cross": "cp_req_pending",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::tl_a_chan_cov_cg",
+      "coverpoint_or_cross": "cp_mask",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 3,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::tl_a_chan_cov_cg",
+      "coverpoint_or_cross": "cp_opcode",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 1,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::tl_a_chan_cov_cg",
+      "coverpoint_or_cross": "cp_size",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    },
+    {
+      "bin_count": 129,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::tl_a_chan_cov_cg",
+      "coverpoint_or_cross": "cp_source",
+      "dbscan_clusters": 1,
+      "final_clusters": 5
+    },
+    {
+      "bin_count": 3,
+      "component": "tl_agent",
+      "covergroup": "tl_agent_pkg::tl_a_chan_cov_cg",
+      "coverpoint_or_cross": "tl_a_chan_cov_cg_cc",
+      "dbscan_clusters": 1,
+      "final_clusters": 1
+    }
+  ],
+  "review_guidance": "Compare component, scope, covergroup, point/cross, literals and source line with the frozen manifest.",
+  "sample_bin_ids": [
+    "bin_0cde846a6b21b243c5fa426e4d0dc50217cd12074f1432a4937eef71bea1e552",
+    "bin_001e040060cd09be9b5c1a08551f40be2e0e4c9709acdf5bf0a31eac1fba81d3",
+    "bin_006535b5cc64c6a66eae9813df5022cad846ede0bfc0263001731da38cdee3e5",
+    "bin_29558938feeaad5ce3c98af0804829c1e753659582617b3de2ea9fb64e72b6c1",
+    "bin_0262c565ed5345f73aee58b279a6f4444071137b7948863acb5b4f9f6e5b38c7",
+    "bin_18538e4c188b2c6e000c0e9b62f6b177ee25880c1ba8f0a7d4530a022cece245",
+    "bin_01d9e53d9c62f73117a4ebac82ed979509c79dcc9b6af2a1baee50bea320e959",
+    "bin_0022119f5b6bac66d52b66bb10b4dc59650bdbeba88e93193861f91f494ab907",
+    "bin_00b8f77c844226d178177a892ba388116a64f2d081f48a09e0cc13b78bc0fb48"
+  ]
+}
