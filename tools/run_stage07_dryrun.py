@@ -38,11 +38,14 @@ class Scheduler:
         self.sequences = dict(sorted(inputs["sequences"].items()))
         self.history = {k: next(r for r in inputs["initial_runs"] if r["sequence"] == k) for k in self.sequences}
         self.covered = set(inputs["initial_covered_bin_ids"])
+        self.initial_count = len(self.covered)
         self.budget, self.workers, self.seed = budget, workers, seed
         self.submitted = self.completed = 0
         self.pending = {}
+        self.virtual_seconds = 0.0
         self.cluster_stats = {k: {"submitted": 0, "completed": 0, "target_gain_sum": 0} for k in self.clusters}
-        self.sequence_stats = {k: {"completed": 0, "history_count": 1, "hit_sums":
+        self.sequence_stats = {k: {"completed": 0, "history_count": 1, "gain_sums":
+            {c: 0 for c in self.clusters}, "hit_sums":
             {c: len(set(self.history[k]["hit_bin_ids"]) & members) for c, members in self.clusters.items()},
             "runtime_sum": float(self.history[k]["runtime_seconds"]), "runtime_count": 1} for k in self.sequences}
         self.policy = None
@@ -54,7 +57,8 @@ class Scheduler:
 
     def state(self):
         return {"covered_bin_ids": sorted(self.covered), "submitted": self.submitted, "completed": self.completed,
-                "pending": self.pending, "policy": self.policy, "policy_count": self.policy_count,
+                "pending": self.pending, "virtual_seconds": self.virtual_seconds,
+                "policy": self.policy, "policy_count": self.policy_count,
                 "cluster_stats": self.cluster_stats, "sequence_stats": self.sequence_stats,
                 "dynamic": self.dynamic()}
 
@@ -90,7 +94,7 @@ class Scheduler:
         max_runtime = max((self.sequence_stats[s]["runtime_sum"] for s in supported), default=0.0)
         for seq in supported:
             st = self.sequence_stats[seq]
-            potential = st["hit_sums"][cid] / st["history_count"]
+            potential = st["gain_sums"][cid] / st["completed"] if st["completed"] else 0.0
             exploration = 2.0 * math.sqrt(math.log(self.completed + 2) / (st["completed"] + 1e-8)) if st["completed"] else 1000.0
             penalty = 1 - 0.1 * (st["runtime_sum"] / max_runtime if max_runtime else 0.0)
             seq_scores[seq] = (potential + exploration) * penalty
@@ -109,9 +113,13 @@ class Scheduler:
         self.event("policy", {"policy": copy.deepcopy(self.policy), "cluster_scores": cluster_scores,
                                "sequence_scores": sequence_scores, "reason": "deterministic_replay_policy"})
         index = self.submitted + 1
+        runtime = float(self.history[seq]["runtime_seconds"])
         job = {"submission_id": f"s{index:06d}", "submission_index": index, "policy_id": self.policy["policy_id"],
                "target_cluster": cid, "sequence": seq, "test": self.sequences[seq]["test"],
-               "stimulus_seed": 1 + int(digest(["stimulus-v1", self.seed, index])[:16], 16) % (2**31 - 1)}
+               "stimulus_seed": 1 + int(digest(["stimulus-v1", self.seed, index])[:16], 16) % (2**31 - 1),
+               "stimulus_seed_applied_to_vcs": False,
+               "submit_virtual_seconds": self.virtual_seconds,
+               "finish_virtual_seconds": self.virtual_seconds + runtime}
         self.pending[job["submission_id"]] = job
         self.submitted += 1
         self.cluster_stats[cid]["submitted"] += 1
@@ -124,6 +132,7 @@ class Scheduler:
         hits = set(replay["hit_bin_ids"])
         new = hits - self.covered
         target_gain = len(new & self.clusters[job["target_cluster"]])
+        self.virtual_seconds = max(self.virtual_seconds, job["finish_virtual_seconds"])
         self.covered.update(hits)
         self.completed += 1
         self.cluster_stats[job["target_cluster"]]["completed"] += 1
@@ -132,9 +141,11 @@ class Scheduler:
         st["completed"] += 1
         st["history_count"] += 1
         for cid in self.clusters:
-            st["hit_sums"][cid] += len(hits & self.clusters[cid])
+            st["gain_sums"][cid] += len(new & self.clusters[cid])
         self.event("complete", {"submission_id": sid, "status": "pass", "replay_source_run_id": replay["run_id"],
-                                 "runtime_seconds": replay["runtime_seconds"], "hit_bin_ids": sorted(hits),
+                                 "runtime_seconds": replay["runtime_seconds"],
+                                 "complete_virtual_seconds": self.virtual_seconds,
+                                 "hit_bin_ids": sorted(hits),
                                  "new_bin_ids": sorted(new), "delta_bin": len(new), "delta_target": target_gain,
                                  "covered_bin_count": len(self.covered)})
 
@@ -150,22 +161,25 @@ def main() -> None:
     if args.output.exists():
         raise SystemExit("OUTPUT_EXISTS")
     scheduler = Scheduler(json.loads(args.inputs.read_text(encoding="utf-8")), args.budget, args.workers, args.seed)
-    while scheduler.submitted < args.budget:
+    while scheduler.submitted < args.budget or scheduler.pending:
         while len(scheduler.pending) < args.workers and scheduler.submitted < args.budget:
             if scheduler.submit() is None:
                 break
         if not scheduler.pending:
             break
-        scheduler.complete(sorted(scheduler.pending)[0])
+        sid = min(scheduler.pending, key=lambda x: (scheduler.pending[x]["finish_virtual_seconds"], x))
+        scheduler.complete(sid)
     args.output.mkdir(parents=True)
     with (args.output / "events.jsonl").open("w", encoding="utf-8", newline="") as f:
         for event in scheduler.events:
             f.write(json.dumps(event, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n")
-    summary = {"schema_version": "opentitan-aon-timer-stage07-dryrun-v1", "mode": "dry_run_replay",
+    summary = {"schema_version": "opentitan-aon-timer-stage07-dryrun-v2", "mode": "dry_run_replay",
                "budget": args.budget, "workers": args.workers, "seed": args.seed,
                "submitted": scheduler.submitted, "completed": scheduler.completed,
-               "initial_covered_bin_count": len(args.inputs and json.loads(args.inputs.read_text(encoding="utf-8")).get("initial_covered_bin_ids", [])),
+               "pending": len(scheduler.pending),
+               "initial_covered_bin_count": scheduler.initial_count,
                "final_covered_bin_count": len(scheduler.covered), "event_count": len(scheduler.events),
+               "virtual_elapsed_seconds": scheduler.virtual_seconds,
                "events_sha256": digest(scheduler.events), "final_state_sha256": digest(scheduler.state()),
                "replay_only": True, "new_vcs_runs": 0}
     (args.output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")

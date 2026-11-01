@@ -1,16 +1,18 @@
 {
   "budget": 32,
-  "completed": 30,
-  "event_count": 95,
-  "events_sha256": "9394a077042027d85b163db2f4357a00734207a1c118e5ce13ea593ca01367ee",
+  "completed": 32,
+  "event_count": 97,
+  "events_sha256": "c8b74eada7b39f72080ddcfa3e394a0e1f98a351dc667d69b277bda0ae2af160",
   "final_covered_bin_count": 376,
-  "final_state_sha256": "27e604081baaa1000cd3bc30fcb0148834f5be2c22d6f933845d8e103262d838",
+  "final_state_sha256": "6823137ab15368ff71d40518000e968ebd716fa85300a8f66f52c6c7764ccf54",
   "initial_covered_bin_count": 376,
   "mode": "dry_run_replay",
   "new_vcs_runs": 0,
+  "pending": 0,
   "replay_only": true,
-  "schema_version": "opentitan-aon-timer-stage07-dryrun-v1",
+  "schema_version": "opentitan-aon-timer-stage07-dryrun-v2",
   "seed": 42,
   "submitted": 32,
+  "virtual_elapsed_seconds": 1553.0,
   "workers": 3
 }

@@ -75,14 +75,21 @@ def main() -> None:
         if hashlib.sha256(canonical(body)).hexdigest() != digest:
             raise SystemExit("EVENT_HASH_MISMATCH")
         previous = digest
+    if summary["schema_version"] != "opentitan-aon-timer-stage07-dryrun-v2":
+        raise SystemExit("DRYRUN_SCHEMA_MISMATCH")
     if summary["event_count"] != len(events) or summary["events_sha256"] != hashlib.sha256(canonical(events)).hexdigest():
         raise SystemExit("EVENT_SUMMARY_MISMATCH")
+    if summary["submitted"] != summary["budget"] or summary["completed"] != summary["submitted"]:
+        raise SystemExit("DRYRUN_INCOMPLETE")
+    if summary["pending"] != 0 or summary["final_covered_bin_count"] != summary["initial_covered_bin_count"]:
+        raise SystemExit("DRYRUN_STATE_MISMATCH")
     result = {"schema": "opentitan-aon-timer-stage07-verification-v1",
               "manifest_sha256": sha256(args.manifest), "matrix_sha256": sha256(args.matrix),
               "cluster_count": len(clusters["clusters"]), "bin_count": 4525,
               "initial_covered_bin_count": 376, "dryrun_budget": summary["budget"],
               "dryrun_workers": summary["workers"], "dryrun_submitted": summary["submitted"],
-              "dryrun_completed": summary["completed"], "event_count": len(events), "passed": True}
+              "dryrun_completed": summary["completed"], "event_count": len(events),
+              "virtual_elapsed_seconds": summary["virtual_elapsed_seconds"], "passed": True}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))

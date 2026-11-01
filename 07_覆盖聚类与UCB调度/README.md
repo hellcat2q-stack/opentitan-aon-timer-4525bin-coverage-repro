@@ -1,6 +1,6 @@
 # 阶段 07：覆盖聚类与UCB调度
 
-**状态：已完成（2026-11-01）。** 阶段 07 使用阶段 04 的 4,525-bin manifest 和阶段 06 的 4,525×17 矩阵，构建 184 个确定性、组件/covergroup/coverpoint 分区的聚类，并计算初始静态信息权重。另生成 32 submission、3 workers 的 replay-only dry-run 事件链；该 dry-run 未启动 VCS。
+**状态：已完成（2026-11-01，已修正回放器）。** 阶段 07 使用阶段 04 的 4,525-bin manifest 和阶段 06 的 4,525×17 矩阵，构建 184 个确定性、组件/covergroup/coverpoint 分区的聚类，并计算初始静态信息权重。另生成 32 submission、3 workers 的 replay-only dry-run 事件链；该 dry-run 未启动 VCS。
 
 ## 目标
 
@@ -36,4 +36,4 @@ python tools\verify_stage07.py `
 
 聚类特征来自冻结 manifest 的 source file、scope、covergroup、coverpoint/cross、bin 文本和数值字面量；先按 component + covergroup base + coverpoint/cross 分区，再执行 Jaccard-token DBSCAN，最大 cluster size 为 32。参数和噪声规则写入 `clusters.json`。
 
-初始覆盖为 376/4,525。UCB dry-run 的 32 次 submission 只是把已完成的 17 个向量作为确定性反馈回放，故最终仍为 376 bins、没有新的 VCS run；它验证调度状态、冷启动、目标 cluster、sequence 选择、runtime penalty 和事件链格式，不构成阶段 08 的在线闭环结果。184 个 cluster 和参数是本项目在新 schema 上的工程选择，不声称等同论文作者未公开的实现。
+初始覆盖为 376/4,525。UCB dry-run 的 32 次 submission 只是把已完成的 17 个向量作为确定性反馈回放，故最终仍为 376 bins、没有新的 VCS run；当前回放按虚拟完成时间处理异步 worker，直到 32/32 提交均完成，且序列奖励只使用相对当前覆盖状态的新命中。虚拟 elapsed 为 1,553 秒，是阶段 06 墙钟区间的回放代理，不是新的 VCS runtime。该 dry-run 验证调度状态、冷启动、目标 cluster、sequence 选择、runtime penalty 和事件链格式，不构成阶段 08 的在线闭环结果。184 个 cluster 和参数是本项目在新 schema 上的工程选择，不声称等同论文作者未公开的实现。

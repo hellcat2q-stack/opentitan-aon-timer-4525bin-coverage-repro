@@ -2,13 +2,14 @@
   "bin_count": 4525,
   "cluster_count": 184,
   "dryrun_budget": 32,
-  "dryrun_completed": 30,
+  "dryrun_completed": 32,
   "dryrun_submitted": 32,
   "dryrun_workers": 3,
-  "event_count": 95,
+  "event_count": 97,
   "initial_covered_bin_count": 376,
   "manifest_sha256": "f38e257ed763cb3f009233560f57d04f05d46735c95a2862ee072b4068aa2683",
   "matrix_sha256": "bf052a8fc8bcbf388867fefb5116a14e2dc1f967a2200d21256f21c08b318eaf",
   "passed": true,
-  "schema": "opentitan-aon-timer-stage07-verification-v1"
+  "schema": "opentitan-aon-timer-stage07-verification-v1",
+  "virtual_elapsed_seconds": 1553.0
 }
