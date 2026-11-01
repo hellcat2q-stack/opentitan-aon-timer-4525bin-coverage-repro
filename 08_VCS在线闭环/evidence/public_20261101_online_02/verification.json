@@ -1,0 +1,13 @@
+{
+  "schema": "opentitan-aon-timer-stage08-verification-v1",
+  "job_sha256": "ddca456e574d43a4a0bb0131319315c958e3afa3f5299a1b5c5bd353398c28a8",
+  "status_sha256": "daa725418c5096e6f26dece3421bb99afd63a4cfd1d7565fe49c5b4de0b3703f",
+  "vector_sha256": "e5febd5f1b8ac5805e19a4d381fb4909cd654085eaa8e9d74bc0d91414621dbc",
+  "item": "aon_timer_sec_cm",
+  "seed": 42,
+  "expected_bins": 4525,
+  "hit_bins": 11,
+  "new_vcs_run": true,
+  "scheduler_stimulus_seed_applied": false,
+  "passed": true
+}

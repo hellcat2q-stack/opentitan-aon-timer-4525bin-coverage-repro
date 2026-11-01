@@ -23,7 +23,7 @@
 | 05 | 盘点全部官方测试，确定作者池和初始语料计划 | 已完成（2026-11-01；17 候选、17 计划运行） | [阶段 05](05_官方测试池与初始计划/README.md) |
 | 06 | 运行初始语料，生成 4525 列 bin-by-run 矩阵 | 已完成（2026-11-01；17/17 通过，初始并集 376 bins） | [阶段 06](06_初始语料与bin矩阵/README.md) |
 | 07 | 按 4000+ bin 规模建立聚类、信息量和 UCB 调度器 | 已完成（2026-11-01；184 clusters，dry-run 仅回放） | [阶段 07](07_覆盖聚类与UCB调度/README.md) |
-| 08 | 接入真实在线仿真，验证异步补位和覆盖反馈 | 已完成（2026-11-01；1 个真实 VCS smoke） | [阶段 08](08_VCS在线闭环/README.md) |
+| 08 | 接入真实在线仿真，验证异步补位和覆盖反馈 | 已完成（2026-11-01；2 个真实 VCS smoke，最新 run `20261101_online_02`） | [阶段 08](08_VCS在线闭环/README.md) |
 | 09 | 完成 Random、Full 和消融对照，预算和 seed 预注册 | 待开始 | [阶段 09](09_随机与方法对照/README.md) |
 | 10 | 两端复核、最终报告、证据索引和 GitHub 交付 | 待开始 | [阶段 10](10_最终复核与交接/README.md) |
 
@@ -32,7 +32,7 @@
 阶段 01 已在新的服务器隔离目录完成 VCS/URG P-2019.06-SP1、UVM 1.2、功能覆盖正/负对照和独立 Python 3.11.7 验收；[25 个脱敏证据文件](01_服务器环境与许可证/evidence/public_20261031_02/summary.json)已通过服务器和本机复核。阶段 02 已完成目标源码完整树核验、官方依赖离线安装、`pip check` 和 `dvsim.py --help` 导入探针；[阶段 02 证据](02_固定源码与依赖/evidence/public_20261031_01/dependencies_verified.json)记录了源码和依赖哈希。阶段 03 已完成官方 smoke、VCS coverage build、VDB merge 和 URG 报告；阶段 04 已冻结 [4,533 条 bin 记录](04_4525-bin覆盖字典/evidence/2026-10-31/run_20261031_08/coverage_manifest.v1.json)，分别保存 4,507 个类型定义与 4,525 个实例计分分母。阶段 05 已完成 [17 个候选 job 和初始计划](05_官方测试池与初始计划/evidence/2026-10-31/source_9f20940d_hashcomplete/test_pool.v1.json)，33 个输入源码/配置哈希已独立复核。能力探针的 4/4 与 3/4 不属于 AON Timer 的实验结果。
 阶段 06 已完成 [17 个独立向量和 4,525×17 矩阵](06_初始语料与bin矩阵/evidence/public_20261101_initial/verification.json)；全部候选返回码为 0，seed 42，初始并集命中 376 个 eligible bins。阶段 06 的 VDB、simv 和完整日志仍保留在服务器隔离目录，公开仓库只保存 URG/XML 派生文本、向量和哈希。
 阶段 07 已完成 [184 个确定性 clusters、初始分数和 scheduler 输入](07_覆盖聚类与UCB调度/evidence/public_20261101_stage07/verification.json)；32 submission/3 workers 的 dry-run 只回放已有阶段 06 向量，没有启动新的 VCS。
-阶段 08 已完成 [1 个真实 VCS 在线反馈 smoke](08_VCS在线闭环/evidence/public_20261101_online_01/verification.json)；`aon_timer_sec_cm`、seed 42、4,525 列向量和返回码 0 已独立复核。scheduler 派生 stimulus seed 仍未接入真实 wrapper，阶段 08 结果不等同论文规模在线闭环。
+阶段 08 已完成 [2 个真实 VCS 在线反馈 smoke](08_VCS在线闭环/evidence/public_20261101_online_02/verification.json)；最新 run `aon_timer_sec_cm`、seed 42、4,525 列向量和返回码 0 已独立复核，命中 11 bins（0.243094%）。scheduler 派生 stimulus seed 仍未接入真实 wrapper，阶段 08 结果不等同论文规模在线闭环。
 
 ## 资料入口
 
